@@ -138,7 +138,8 @@
     "moreTags": "others",
     "noResults": "No articles match your search criteria.",
     "resetFilters": "Reset filters",
-    "loadingPosts": "Loading articles..."
+    "loadingPosts": "Loading articles...",
+    "canonicalNotice": "This article was originally published on"
   },
   "certifications": {
     "title": "Certifications & Expertise",

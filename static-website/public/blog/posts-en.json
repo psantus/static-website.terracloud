@@ -1,0 +1,169 @@
+{
+  "posts": [
+    {
+      "id": "how-to-replace-your-cms-with-a-static-site-using-amazon-q-cli-chat",
+      "title": "How to Replace Your CMS with a Static Site Using Amazon Q CLI Chat",
+      "description": "I tackled the AWS Builder Challenge #cloud-launch-challenge-1 by completely rebuilding my consulting website in under 5 hours. Discover how to replace WordPress with a modern static architecture using Amazon Q CLI Chat as your AI pair programming partner.",
+      "date": "2025-08-25",
+      "category": "blog",
+      "tags": ["aws", "static-site", "amazon-q", "cli-chat", "wordpress", "migration", "terraform", "s3", "cloudfront", "lambda", "ai", "builder-challenge"],
+      "featuredImage": "",
+      "slug": "how-to-replace-your-cms-with-a-static-site-using-amazon-q-cli-chat"
+    },
+    {
+      "id": "aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers",
+      "title": "AWS User Group Poitiers: Recap of the Serverless PHP Meetup with AFUP Poitiers",
+      "description": "Lambda was in the spotlight at the latest AWS User Group Poitiers meeting, along with Bref, a PHP runtime dedicated to serverless.",
+      "date": "2024-09-23",
+      "category": "blog",
+      "tags": ["aws", "aws user group", "bref", "lambda", "php", "Poitiers", "serverless"],
+      "featuredImage": "/images/blog/1726812299969.jpeg",
+      "slug": "aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers"
+    },
+    {
+      "id": "architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets",
+      "title": "Event-Driven Architecture: Reconciling Notifications and Complete Events",
+      "description": "Minimalist or complete events? In event-driven architecture, different models exist. We propose here a way to simply reconcile the different approaches.",
+      "date": "2024-07-04",
+      "category": "blog",
+      "tags": ["architecture", "aws", "event", "event-driven architecture", "eventbridge"],
+      "featuredImage": "/images/blog/NotificationVsECST.png",
+      "slug": "architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets",
+      "canonicalUrl": "https://dev.to/aws-builders/event-driven-architecture-reconcile-notification-and-event-carried-state-transfer-patterns-5697"
+    },
+    {
+      "id": "les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire",
+      "title": "Your S3 Bucket Objects Might Be Public Even If the AWS Console Says Otherwise",
+      "description": "S3 is an incredible storage service, capable of durably storing data at scale. In this blog article, I'll show you a little-known way your objects could become public by mistake.",
+      "date": "2024-05-02",
+      "category": "blog",
+      "tags": ["aws", "s3", "security"],
+      "featuredImage": "",
+      "slug": "les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire"
+    },
+    {
+      "id": "protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf",
+      "title": "Protect Your Applications from Attacks with AWS CloudFront and AWS WAF",
+      "description": "Discover how to effectively protect your web applications against malicious attacks using AWS CloudFront and AWS WAF.",
+      "date": "2024-03-18",
+      "category": "tech",
+      "tags": ["aws", "cloudfront", "security", "waf", "web-application-firewall"],
+      "featuredImage": "",
+      "slug": "protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf"
+    },
+    {
+      "id": "utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding",
+      "title": "Use Your ECS Container (Even on Fargate) as a Bastion to Access Your Database with Local Port Forwarding",
+      "description": "Discover how to use an ECS container on Fargate as a bastion to access your private databases.",
+      "date": "2024-03-04",
+      "category": "tech",
+      "tags": ["architecture", "aws", "bastion", "container", "docker", "ecs"],
+      "featuredImage": "",
+      "slug": "utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding"
+    },
+    {
+      "id": "cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops",
+      "title": "Cloud 101 - Episode 3: 7 Keys to Avoid Waste 💰 - FinOps",
+      "description": "Recurring joke among cloud engineers: 'what's expensive in the cloud isn't so much the resources you use as those you forgot to turn off'.",
+      "date": "2024-02-12",
+      "category": "blog",
+      "tags": ["aws", "cloud", "finops"],
+      "featuredImage": "/images/blog/29f15494-c167-4586-8e90-faaa11af450e.jpg",
+      "slug": "cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops"
+    },
+    {
+      "id": "etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2",
+      "title": "Extend Amazon Connect Capabilities with Lambda and Lex v2",
+      "description": "Discover how to extend Amazon Connect functionalities using AWS Lambda and Amazon Lex V2.",
+      "date": "2023-11-15",
+      "category": "tech",
+      "tags": ["AmazonConnect", "AmazonLex", "AWSLambda", "CX", "ContactCenter", "CustomerRelations"],
+      "featuredImage": "",
+      "slug": "etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2"
+    },
+    {
+      "id": "cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site",
+      "title": "Cloud 101 - Episode 2: SysOps, 10 Services for Your On-Premises Infrastructure",
+      "description": "Discover 10 essential AWS services to manage your on-premises infrastructure like a pro.",
+      "date": "2023-11-07",
+      "category": "blog",
+      "tags": ["aws", "backup", "inventory", "management", "patchmanagement", "sysops", "systemsmanager"],
+      "featuredImage": "",
+      "slug": "cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site"
+    },
+    {
+      "id": "cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud",
+      "title": "Cloud 101 - Episode 1: What is the Real Added Value of the Cloud?",
+      "description": "First part of our Cloud 101 series: understanding the real added value of cloud computing.",
+      "date": "2023-10-17",
+      "category": "opinion",
+      "tags": ["agility", "cloud", "value"],
+      "featuredImage": "",
+      "slug": "cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud"
+    },
+    {
+      "id": "make-or-buy-assemblez",
+      "title": "Make or Buy? Assemble!",
+      "description": "Reflection on technological choices: should you develop or buy? What if the answer was to assemble?",
+      "date": "2023-09-26",
+      "category": "opinion",
+      "tags": ["agnostic", "software", "business", "native", "time-to-market"],
+      "featuredImage": "",
+      "slug": "make-or-buy-assemblez",
+      "canonicalUrl": "https://dev.to/psantus/make-or-buy-assemblez--bbn"
+    },
+    {
+      "id": "cloud-agnostique-ou-cloud-natif",
+      "title": "Cloud Agnostic or Cloud Native?",
+      "description": "Analysis of the advantages and disadvantages between a cloud agnostic and cloud native approach.",
+      "date": "2023-09-13",
+      "category": "opinion",
+      "tags": ["agnostic", "native"],
+      "featuredImage": "",
+      "slug": "cloud-agnostique-ou-cloud-natif",
+      "canonicalUrl": "https://dev.to/psantus/cloud-agnostique-ou-cloud-natif--165k"
+    },
+    {
+      "id": "lagilite-une-question-de-confiance-a-construire",
+      "title": "Agility: A Matter of Trust to Build",
+      "description": "I was fortunate to be introduced to agility within a team of seasoned developers. Later, I had the opportunity to help start five agile development teams.",
+      "date": "2023-07-02",
+      "category": "opinion",
+      "tags": ["agility", "management", "value"],
+      "featuredImage": "",
+      "slug": "lagilite-une-question-de-confiance-a-construire",
+      "canonicalUrl": "https://dev.to/psantus/lagilite-une-question-de-confiance-a-construire-300a"
+    },
+    {
+      "id": "deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb",
+      "title": "Deploy a Simple Data Storage API with Very Little Code Using Amazon API Gateway and DynamoDB",
+      "description": "Tutorial to quickly create a storage API with AWS API Gateway and DynamoDB.",
+      "date": "2022-12-17",
+      "category": "blog",
+      "tags": ["api", "apigateway", "aws", "dynamodb", "serverless"],
+      "featuredImage": "",
+      "slug": "deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb",
+      "canonicalUrl": "https://dev.to/aws-builders/deploy-a-simple-data-storage-api-with-very-little-code-using-amazon-api-gateway-and-dynamodb-d95"
+    },
+    {
+      "id": "aws-reinvent-2022-notre-bilan",
+      "title": "AWS re:Invent 2022: Our Review",
+      "description": "Review of the AWS re:Invent 2022 event with our impressions and notable announcements.",
+      "date": "2022-12-05",
+      "category": "blog",
+      "tags": ["aws", "reinvent"],
+      "featuredImage": "",
+      "slug": "aws-reinvent-2022-notre-bilan"
+    },
+    {
+      "id": "powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j",
+      "title": "PowerBI: Deploy a Gateway on AWS for $0.12/day",
+      "description": "Guide to deploy a PowerBI gateway on AWS economically.",
+      "date": "2022-12-03",
+      "category": "blog",
+      "tags": ["aws", "ec2", "powerbi"],
+      "featuredImage": "",
+      "slug": "powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j"
+    }
+  ]
+}

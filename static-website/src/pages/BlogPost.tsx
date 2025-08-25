@@ -5,19 +5,18 @@ import { useTranslation } from 'react-i18next'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Calendar, Clock, Tag, ArrowLeft, User } from 'lucide-react'
-import { getPostBySlug, calculateReadingTime } from '../data/blogPosts'
+import { getPostBySlug, calculateReadingTime, BlogPost as BlogPostType } from '../data/blogPosts'
 import { loadMarkdownContent } from '../utils/markdownLoader'
 import BackToTop from '../components/BackToTop'
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
   const { t, i18n } = useTranslation()
+  const [post, setPost] = useState<BlogPostType | undefined>(undefined)
   const [markdownContent, setMarkdownContent] = useState('')
   const [loading, setLoading] = useState(true)
   const [actualReadingTime, setActualReadingTime] = useState<number | null>(null)
   
-  const post = slug ? getPostBySlug(slug, i18n.language) : undefined
-
   // Helper function to create language-aware URLs
   const createUrl = (path: string) => {
     if (i18n.language === 'en') {
@@ -25,37 +24,6 @@ const BlogPost = () => {
     }
     return path
   }
-
-  useEffect(() => {
-    if (post) {
-      console.log(`Loading markdown for: ${post.slug} in language: ${i18n.language}`)
-      
-      loadMarkdownContent(post.slug, i18n.language)
-        .then(content => {
-          if (content) {
-            console.log(`Loaded content for ${post.slug}, length:`, content.length)
-            setMarkdownContent(content)
-            // Calculate actual reading time based on content
-            setActualReadingTime(calculateReadingTime(content))
-          } else {
-            console.log(`No content found for ${post.slug}, using placeholder`)
-            const placeholder = generatePlaceholderContent(post.title, post.excerpt)
-            setMarkdownContent(placeholder)
-            setActualReadingTime(calculateReadingTime(placeholder))
-          }
-          setLoading(false)
-        })
-        .catch(error => {
-          console.error(`Error loading markdown for ${post.slug}:`, error)
-          const placeholder = generatePlaceholderContent(post.title, post.excerpt)
-          setMarkdownContent(placeholder)
-          setActualReadingTime(calculateReadingTime(placeholder))
-          setLoading(false)
-        })
-    } else {
-      setLoading(false)
-    }
-  }, [post, i18n.language]) // Re-run when language changes
 
   const generatePlaceholderContent = (title: string, excerpt: string) => {
     return `# ${title}
@@ -75,8 +43,51 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
 *Article en cours de migration - TerraCloud*`
   }
 
+  useEffect(() => {
+    const loadPostData = async () => {
+      if (!slug) {
+        setLoading(false)
+        return
+      }
+
+      try {
+        const postData = await getPostBySlug(slug, i18n.language)
+        setPost(postData)
+
+        if (postData) {
+          console.log(`Loading markdown for: ${postData.slug} in language: ${i18n.language}`)
+          
+          const content = await loadMarkdownContent(postData.slug, i18n.language)
+          if (content) {
+            console.log(`Loaded content for ${postData.slug}, length:`, content.length)
+            setMarkdownContent(content)
+            // Calculate actual reading time based on content
+            setActualReadingTime(calculateReadingTime(content))
+          } else {
+            console.log(`No content found for ${postData.slug}, using placeholder`)
+            const placeholder = generatePlaceholderContent(postData.title, postData.excerpt)
+            setMarkdownContent(placeholder)
+            setActualReadingTime(calculateReadingTime(placeholder))
+          }
+        }
+      } catch (error) {
+        console.error(`Error loading post data for ${slug}:`, error)
+        if (post) {
+          const placeholder = generatePlaceholderContent(post.title, post.excerpt)
+          setMarkdownContent(placeholder)
+          setActualReadingTime(calculateReadingTime(placeholder))
+        }
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadPostData()
+  }, [slug, i18n.language])
+
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('fr-FR', {
+    const locale = i18n.language === 'en' ? 'en-US' : 'fr-FR'
+    return new Date(dateString).toLocaleDateString(locale, {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -85,14 +96,14 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
 
   const getCategoryLabel = (category: string) => {
     const labels: { [key: string]: string } = {
-      'tech': 'Technique',
-      'opinion': 'Opinion',
-      'blog': 'Blog'
+      'tech': t('blog.categories.tech', 'Technique'),
+      'opinion': t('blog.categories.opinion', 'Opinion'),
+      'blog': t('blog.categories.blog', 'Blog')
     }
     return labels[category] || category
   }
 
-  if (!post) {
+  if (!post && !loading) {
     return <Navigate to={createUrl('/blog')} replace />
   }
 
@@ -116,6 +127,10 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
     )
   }
 
+  if (!post) {
+    return <Navigate to={createUrl('/blog')} replace />
+  }
+
   return (
     <>
       <Helmet>
@@ -131,6 +146,19 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
         {post.tags.map(tag => (
           <meta key={tag} property="article:tag" content={tag} />
         ))}
+        {/* Canonical URL - use provided canonical or default to current page */}
+        <link 
+          rel="canonical" 
+          href={post.canonicalUrl || `${window.location.origin}${createUrl(`/blog/${post.slug}`)}`} 
+        />
+        {/* If there's a canonical URL different from current page, add alternate link */}
+        {post.canonicalUrl && post.canonicalUrl !== `${window.location.origin}${createUrl(`/blog/${post.slug}`)}` && (
+          <link 
+            rel="alternate" 
+            href={`${window.location.origin}${createUrl(`/blog/${post.slug}`)}`}
+            hrefLang={i18n.language}
+          />
+        )}
       </Helmet>
 
       <div className="section-padding">
@@ -143,12 +171,38 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
                 className="inline-flex items-center text-terracloud-orange hover:text-terracloud-blue transition-colors"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                {t('blog.backToBlog')}
+                {t('blog.backToBlog', 'Retour au blog')}
               </Link>
             </div>
 
             {/* Article Header */}
             <header className="mb-8">
+              {/* Canonical URL Notice */}
+              {post.canonicalUrl && post.canonicalUrl !== `${window.location.origin}${createUrl(`/blog/${post.slug}`)}` && (
+                <div className="mb-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm text-blue-700">
+                        {t('blog.canonicalNotice', 'Cet article a été publié originalement sur')} {' '}
+                        <a 
+                          href={post.canonicalUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="font-medium underline hover:text-blue-800"
+                        >
+                          {new URL(post.canonicalUrl).hostname}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Category Badge */}
               <div className="mb-4">
                 <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
@@ -297,14 +351,14 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
                   className="inline-flex items-center text-terracloud-orange hover:text-terracloud-blue transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  {t('blog.backToBlog')}
+                  {t('blog.backToBlog', 'Retour au blog')}
                 </Link>
                 
                 <Link
                   to={createUrl('/nous-contacter')}
                   className="bg-terracloud-orange text-white px-6 py-2 rounded-lg hover:bg-terracloud-blue transition-colors"
                 >
-                  {t('common.contact')}
+                  {t('common.contact', 'Contact')}
                 </Link>
               </div>
             </div>

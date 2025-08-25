@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Calendar, Clock, Tag, Search } from 'lucide-react'
-import { getBlogPosts, getAllTags, getAllCategories } from '../data/blogPosts'
+import { getBlogPosts, getAllTags, getAllCategories, BlogPost } from '../data/blogPosts'
 import BackToTop from '../components/BackToTop'
 
 const Blog = () => {
@@ -11,6 +11,10 @@ const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedTag, setSelectedTag] = useState('all')
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([])
+  const [categories, setCategories] = useState<string[]>([])
+  const [tags, setTags] = useState<string[]>([])
+  const [loading, setLoading] = useState(true)
 
   // Helper function to create language-aware URLs
   const createUrl = (path: string) => {
@@ -20,10 +24,28 @@ const Blog = () => {
     return path
   }
 
-  // Get blog posts in current language
-  const blogPosts = getBlogPosts(i18n.language)
-  const categories = getAllCategories(i18n.language)
-  const tags = getAllTags(i18n.language)
+  // Load blog data when component mounts or language changes
+  useEffect(() => {
+    const loadBlogData = async () => {
+      setLoading(true)
+      try {
+        const [posts, cats, tagList] = await Promise.all([
+          getBlogPosts(i18n.language),
+          getAllCategories(i18n.language),
+          getAllTags(i18n.language)
+        ])
+        setBlogPosts(posts)
+        setCategories(cats)
+        setTags(tagList)
+      } catch (error) {
+        console.error('Error loading blog data:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadBlogData()
+  }, [i18n.language])
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -50,6 +72,19 @@ const Blog = () => {
       'blog': t('blog.categories.blog', 'Blog')
     }
     return labels[category] || category
+  }
+
+  if (loading) {
+    return (
+      <div className="section-padding">
+        <div className="container-custom">
+          <div className="text-center py-12">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-terracloud-orange mx-auto"></div>
+            <p className="mt-4 text-terracloud-gray">{t('common.loading', 'Loading...')}</p>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (

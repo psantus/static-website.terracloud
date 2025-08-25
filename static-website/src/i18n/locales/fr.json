@@ -138,7 +138,8 @@
     "moreTags": "autres",
     "noResults": "Aucun article ne correspond à vos critères de recherche.",
     "resetFilters": "Réinitialiser les filtres",
-    "loadingPosts": "Chargement des articles..."
+    "loadingPosts": "Chargement des articles...",
+    "canonicalNotice": "Cet article a été publié originalement sur"
   },
   "certifications": {
     "title": "Certifications & Expertise",

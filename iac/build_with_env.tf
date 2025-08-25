@@ -27,8 +27,10 @@ resource "null_resource" "build_react_app_with_env" {
       rm -rf dist
       find . -name "dist" -type d -exec rm -rf {} + 2>/dev/null || true
       
-      # Install dependencies
-      echo "Installing dependencies..."
+      # Fix Vite corruption by cleaning and reinstalling dependencies
+      echo "Cleaning and reinstalling dependencies to fix Vite corruption..."
+      rm -rf node_modules
+      rm -f package-lock.json
       npm install
       
       # Create .env.production file with environment variables

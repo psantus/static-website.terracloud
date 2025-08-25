@@ -1,7 +1,8 @@
 # ACM Certificate
 resource "aws_acm_certificate" "static_website" {
   provider          = aws.us-east-1
-  domain_name       = local.full_domain_name
+  domain_name       = local.full_domain_name  # www.terracloud.fr
+  subject_alternative_names = [var.domain]    # terracloud.fr
   validation_method = "DNS"
 
   tags = local.common_tags

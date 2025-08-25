@@ -8,8 +8,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isAboutOpen, setIsAboutOpen] = useState(false)
-  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const servicesTimeoutRef = useRef<number | null>(null)
+  const aboutTimeoutRef = useRef<number | null>(null)
   const location = useLocation()
   const { t, i18n } = useTranslation()
 

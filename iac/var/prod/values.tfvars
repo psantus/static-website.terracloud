@@ -9,10 +9,9 @@ project_name = "terracloud-website"
 # Environment (dev, staging, prod)
 environment = "prod"
 
-# Optional: Domain name for the website
-# Leave empty to use CloudFront default domain
+# Domain configuration
 domain = "terracloud.fr"
-subdomain = "web"
+subdomain = "www"  # Changed from "web" to "www"
 
 # Email address to receive contact form notifications
 notification_email = "contact@terracloud.fr"

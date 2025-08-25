@@ -22,10 +22,23 @@ resource "aws_route53_record" "cert_validation" {
   zone_id         = data.aws_route53_zone.main.zone_id
 }
 
-# Route53 record pointing to CloudFront distribution
-resource "aws_route53_record" "static_website" {
+# Route53 record for www subdomain pointing to main CloudFront distribution
+resource "aws_route53_record" "www" {
   zone_id = data.aws_route53_zone.main.zone_id
-  name    = local.full_domain_name
+  name    = local.full_domain_name  # www.terracloud.fr
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.static_website.domain_name
+    zone_id                = aws_cloudfront_distribution.static_website.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+# Route53 record for apex domain pointing to main CloudFront distribution
+resource "aws_route53_record" "apex" {
+  zone_id = data.aws_route53_zone.main.zone_id
+  name    = var.domain  # terracloud.fr
   type    = "A"
 
   alias {

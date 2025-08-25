@@ -15,8 +15,8 @@ resource "aws_cloudfront_distribution" "static_website" {
   is_ipv6_enabled     = true
   default_root_object = "index.html"
 
-  # Add aliases for the domain
-  aliases = [local.full_domain_name]
+  # Add aliases for both www and apex domain
+  aliases = [local.full_domain_name, var.domain]
 
   default_cache_behavior {
     allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]

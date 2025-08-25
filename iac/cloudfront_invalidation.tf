@@ -10,3 +10,5 @@ resource "null_resource" "cloudfront_invalidation" {
 
   depends_on = [aws_s3_object.static_website_files]
 }
+
+# Note: No separate apex redirect invalidation needed since main distribution handles both domains

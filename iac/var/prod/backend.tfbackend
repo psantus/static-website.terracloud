@@ -1,0 +1,6 @@
+region         = "eu-west-1"
+profile        = "terracloud"
+bucket         = "terracloud-backend-tfstates"
+key            = "terracloud-website/terraform.tfstate"
+dynamodb_table = "terracloud-tfstate-locking"
+encrypt        = true

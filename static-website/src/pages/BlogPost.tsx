@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -8,6 +7,7 @@ import { Calendar, Clock, Tag, ArrowLeft, User } from 'lucide-react'
 import { getPostBySlug, calculateReadingTime, BlogPost as BlogPostType } from '../data/blogPosts'
 import { loadMarkdownContent } from '../utils/markdownLoader'
 import BackToTop from '../components/BackToTop'
+import SEO from '../components/SEO'
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -133,33 +133,14 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
 
   return (
     <>
-      <Helmet>
-        <title>{post.title} - TerraCloud</title>
-        <meta name="description" content={post.excerpt} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:type" content="article" />
-        {post.image && <meta property="og:image" content={post.image} />}
-        <meta property="article:published_time" content={post.publishedAt} />
-        <meta property="article:author" content={post.author} />
-        <meta property="article:section" content={getCategoryLabel(post.category)} />
-        {post.tags.map(tag => (
-          <meta key={tag} property="article:tag" content={tag} />
-        ))}
-        {/* Canonical URL - use provided canonical or default to current page */}
-        <link 
-          rel="canonical" 
-          href={post.canonicalUrl || `${window.location.origin}${createUrl(`/blog/${post.slug}`)}`} 
-        />
-        {/* If there's a canonical URL different from current page, add alternate link */}
-        {post.canonicalUrl && post.canonicalUrl !== `${window.location.origin}${createUrl(`/blog/${post.slug}`)}` && (
-          <link 
-            rel="alternate" 
-            href={`${window.location.origin}${createUrl(`/blog/${post.slug}`)}`}
-            hrefLang={i18n.language}
-          />
-        )}
-      </Helmet>
+      <SEO 
+        title={`${post.title} - TerraCloud`}
+        description={post.excerpt}
+        keywords={`${post.tags.join(', ')}, AWS, Cloud, DevOps, Blog`}
+        ogImage={post.image}
+        ogType="article"
+        canonical={post.canonicalUrl} // This will use custom canonical if provided, otherwise self-canonical
+      />
 
       <div className="section-padding">
         <div className="container-custom">

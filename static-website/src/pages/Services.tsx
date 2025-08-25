@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { 
   Cloud, 
@@ -11,6 +10,7 @@ import {
   GraduationCap,
   Briefcase
 } from 'lucide-react'
+import SEO from '../components/SEO'
 
 const Services = () => {
   const { t, i18n } = useTranslation()
@@ -84,10 +84,11 @@ const Services = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t('services.title')}</title>
-        <meta name="description" content={t('services.description')} />
-      </Helmet>
+      <SEO 
+        title={t('services.title')}
+        description={t('services.description')}
+        keywords="AWS, Cloud, DevOps, Architecture, Formation, Migration, Terraform, Kubernetes, Services"
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-terracloud-dark to-gray-800 text-white section-padding">

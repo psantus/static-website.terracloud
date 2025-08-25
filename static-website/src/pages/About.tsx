@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Award, MapPin, Users, Target, CheckCircle, Star, ExternalLink } from 'lucide-react'
 import { getStringArray, getTranslationItems, ValueItem } from '../types/translations'
+import SEO from '../components/SEO'
 
 const About = () => {
   const { t, i18n } = useTranslation()
@@ -21,10 +21,11 @@ const About = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t('about.title')}</title>
-        <meta name="description" content={t('about.description')} />
-      </Helmet>
+      <SEO 
+        title={t('about.title')}
+        description={t('about.description')}
+        keywords="TerraCloud, À propos, Paul Santus, AWS, Cloud, DevOps, Architecture, Expertise"
+      />
 
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-terracloud-blue to-terracloud-orange text-white">

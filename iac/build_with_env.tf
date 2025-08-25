@@ -23,18 +23,20 @@ resource "null_resource" "build_react_app_with_env" {
       echo "Starting build process with environment variables..."
       cd ../static-website
       
-      # Clean previous build
+      # Clean previous build more thoroughly
       rm -rf dist
+      find . -name "dist" -type d -exec rm -rf {} + 2>/dev/null || true
       
       # Install dependencies
       echo "Installing dependencies..."
       npm install
       
-      # Create .env.production file with Lambda URL
+      # Create .env.production file with environment variables
       echo "VITE_CONTACT_FORM_URL=${aws_lambda_function_url.contact_form_url.function_url}" > .env.production
+      echo "VITE_BASE_URL=https://web.terracloud.fr" >> .env.production
       
-      # Build the application
-      echo "Building application..."
+      # Build the application with all optimizations
+      echo "Building application with optimizations..."
       npm run build
       
       # Verify build output
@@ -43,9 +45,11 @@ resource "null_resource" "build_react_app_with_env" {
         exit 1
       fi
       
-      echo "Build completed successfully"
-      echo "Built files:"
-      find dist -type f | head -10
+      echo "Build completed successfully with optimizations"
+      echo "Pre-rendered routes:"
+      find dist -name "index.html" | head -10
+      echo "Total files built:"
+      find dist -type f | wc -l
       
       # Clean up environment file
       rm -f .env.production

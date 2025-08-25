@@ -11,7 +11,11 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/logo-orange.webp" as="image" type="image/webp">
-    <link rel="preload" href="/paul-santus.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="/paul-santus.jpg" as="image" type="image/jpeg" fetchpriority="high">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NjuGObqx1XmO1I4TC1C4G8.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2" as="font" type="font/woff2" crossorigin>
     
     <title>TerraCloud - Les deux pieds sur terre, la tête dans le Cloud</title>
     <meta name="description" content="TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops." />
@@ -20,7 +24,6 @@
     <meta name="keywords" content="AWS, Cloud, DevOps, Architecture, Formation, Migration, Terraform, Kubernetes">
     <meta name="author" content="TerraCloud">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://web.terracloud.fr/">
     
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="TerraCloud - Les deux pieds sur terre, la tête dans le Cloud">
@@ -38,6 +41,23 @@
     <!-- Google Fonts - Optimized loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inline critical font CSS for immediate rendering -->
+    <style>
+      @font-face {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 400 700;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NjuGObqx1XmO1I4TC1C4G8.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400 700;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2') format('woff2');
+      }
+    </style>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
   </head>

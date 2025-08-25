@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Cloud, Shield, Zap, Users, ArrowRight, CheckCircle } from 'lucide-react'
+import SEO from '../components/SEO'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -37,10 +37,10 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t('home.title')}</title>
-        <meta name="description" content={t('home.description')} />
-      </Helmet>
+      <SEO 
+        title={t('home.title')}
+        description={t('home.description')}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-terracloud-blue to-terracloud-orange text-white section-padding">

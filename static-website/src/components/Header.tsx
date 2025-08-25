@@ -76,11 +76,16 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to={createUrl('/')} className="flex items-center">
-            <img 
-              src="/logo-orange.png" 
-              alt="TerraCloud" 
-              className="h-8 w-auto"
-            />
+            <picture>
+              <source srcSet="/logo-orange.webp" type="image/webp" />
+              <img 
+                src="/logo-orange.png" 
+                alt="TerraCloud" 
+                className="h-8 w-auto"
+                width="253"
+                height="32"
+              />
+            </picture>
           </Link>
 
           {/* Desktop Navigation */}

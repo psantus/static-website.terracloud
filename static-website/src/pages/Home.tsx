@@ -55,7 +55,7 @@ const Home = () => {
                 {t('home.hero.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/prendre-rendez-vous" className="btn-primary bg-white text-terracloud-blue hover:bg-gray-100">
+                <Link to="/prendre-rendez-vous" className="btn-primary">
                   {t('home.hero.cta1')}
                 </Link>
                 <Link to="/services" className="btn-secondary border-white text-white hover:bg-white hover:text-terracloud-blue">

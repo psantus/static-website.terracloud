@@ -1,30 +1,39 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
-import { useEffect } from 'react'
+import { useEffect, Suspense, lazy } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import RedirectHandler from './components/RedirectHandler'
-import Home from './pages/Home'
-import Services from './pages/Services'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import BookAppointment from './pages/BookAppointment'
-import CustomerReferences from './pages/CustomerReferences'
-import Legal from './pages/Legal'
-import NotFound from './pages/NotFound'
 
-// Service pages
-import DevOps from './pages/services/DevOps'
-import PartTimeCTO from './pages/services/PartTimeCTO'
-import CloudStart from './pages/services/CloudStart'
-import AWSArchitect from './pages/services/AWSArchitect'
-import SoftwareArchitecture from './pages/services/SoftwareArchitecture'
-import AWSMigration from './pages/services/AWSMigration'
-import AWSTraining from './pages/services/AWSTraining'
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'))
+const Services = lazy(() => import('./pages/Services'))
+const Blog = lazy(() => import('./pages/Blog'))
+const BlogPost = lazy(() => import('./pages/BlogPost'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
+const BookAppointment = lazy(() => import('./pages/BookAppointment'))
+const CustomerReferences = lazy(() => import('./pages/CustomerReferences'))
+const Legal = lazy(() => import('./pages/Legal'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+
+// Service pages - lazy loaded
+const DevOps = lazy(() => import('./pages/services/DevOps'))
+const PartTimeCTO = lazy(() => import('./pages/services/PartTimeCTO'))
+const CloudStart = lazy(() => import('./pages/services/CloudStart'))
+const AWSArchitect = lazy(() => import('./pages/services/AWSArchitect'))
+const SoftwareArchitecture = lazy(() => import('./pages/services/SoftwareArchitecture'))
+const AWSMigration = lazy(() => import('./pages/services/AWSMigration'))
+const AWSTraining = lazy(() => import('./pages/services/AWSTraining'))
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-terracloud-orange"></div>
+  </div>
+)
 
 function App() {
   const { t, i18n } = useTranslation()
@@ -53,7 +62,8 @@ function App() {
       <main className="flex-grow">
         <RedirectHandler />
         <ScrollToTop />
-        <Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
           {/* French routes (default, no prefix) */}
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
@@ -93,6 +103,7 @@ function App() {
           {/* 404 for any other routes */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </main>
       
       <Footer />

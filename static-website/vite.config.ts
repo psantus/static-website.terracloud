@@ -12,10 +12,20 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          markdown: ['react-markdown', 'remark-gfm']
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          i18n: ['react-i18next', 'i18next'],
+          markdown: ['react-markdown', 'remark-gfm'],
+          icons: ['lucide-react'],
+          helmet: ['react-helmet-async']
         }
       }
-    }
+    },
+    // Optimize chunk size warnings
+    chunkSizeWarningLimit: 1000
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'react-i18next']
   }
 })

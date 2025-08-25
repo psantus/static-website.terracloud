@@ -8,13 +8,38 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
     <meta name="msapplication-TileImage" content="/favicon-192x192.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/logo-orange.webp" as="image" type="image/webp">
+    <link rel="preload" href="/paul-santus.jpg" as="image" type="image/jpeg">
+    
     <title>TerraCloud - Les deux pieds sur terre, la tête dans le Cloud</title>
     <meta name="description" content="TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops." />
     
-    <!-- Google Fonts -->
+    <!-- Additional SEO meta tags -->
+    <meta name="keywords" content="AWS, Cloud, DevOps, Architecture, Formation, Migration, Terraform, Kubernetes">
+    <meta name="author" content="TerraCloud">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://web.terracloud.fr/">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="TerraCloud - Les deux pieds sur terre, la tête dans le Cloud">
+    <meta property="og:description" content="TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://web.terracloud.fr/">
+    <meta property="og:image" content="https://web.terracloud.fr/logo-orange.png">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TerraCloud - Les deux pieds sur terre, la tête dans le Cloud">
+    <meta name="twitter:description" content="TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops.">
+    <meta name="twitter:image" content="https://web.terracloud.fr/logo-orange.png">
+    
+    <!-- Google Fonts - Optimized loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
   </head>
   <body>
     <div id="root"></div>

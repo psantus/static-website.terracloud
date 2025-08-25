@@ -53,10 +53,21 @@ output "route53_zone_id" {
   value       = data.aws_route53_zone.main.zone_id
 }
 
+# Contact form outputs
+output "contact_form_lambda_url" {
+  description = "URL of the contact form Lambda function"
+  value       = aws_lambda_function_url.contact_form_url.function_url
+}
+
+output "sns_topic_arn" {
+  description = "ARN of the SNS topic for contact form notifications"
+  value       = aws_sns_topic.contact_form_notifications.arn
+}
+
 # Build and deployment tracking outputs
 output "build_timestamp" {
   description = "Timestamp of the last build"
-  value       = null_resource.build_react_app.triggers.timestamp
+  value       = null_resource.build_react_app_with_env.triggers.timestamp
 }
 
 output "deployed_files_count" {
@@ -67,10 +78,12 @@ output "deployed_files_count" {
 output "deployment_info" {
   description = "Deployment information"
   value = {
-    build_completed    = null_resource.build_react_app.id != null
+    build_completed    = null_resource.build_react_app_with_env.id != null
     files_deployed     = length(keys(aws_s3_object.static_website_files))
-    last_build_time    = null_resource.build_react_app.triggers.timestamp
+    last_build_time    = null_resource.build_react_app_with_env.triggers.timestamp
     cloudfront_domain  = aws_cloudfront_distribution.static_website.domain_name
     website_url        = "https://${local.full_domain_name}"
+    contact_form_url   = aws_lambda_function_url.contact_form_url.function_url
+    sns_topic_arn      = aws_sns_topic.contact_form_notifications.arn
   }
 }

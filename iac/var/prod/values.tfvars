@@ -13,3 +13,6 @@ environment = "prod"
 # Leave empty to use CloudFront default domain
 domain = "terracloud.fr"
 subdomain = "web"
+
+# Email address to receive contact form notifications
+notification_email = "contact@terracloud.fr"

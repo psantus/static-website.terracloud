@@ -57,9 +57,9 @@ resource "aws_s3_object" "static_website_files" {
     create_before_destroy = true
   }
 
-  # Ensure the build completes before uploading files
+  # Ensure the build with environment variables completes before uploading files
   # This is the key dependency that ensures proper ordering
-  depends_on = [null_resource.build_react_app]
+  depends_on = [null_resource.build_react_app_with_env]
 
   tags = local.common_tags
 }

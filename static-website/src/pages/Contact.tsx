@@ -1,10 +1,13 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {Helmet} from 'react-helmet-async'
 import {useTranslation} from 'react-i18next'
-import {Clock, Mail, MapPin, Phone, Send} from 'lucide-react'
+import {Clock, Mail, MapPin, Phone, Send, CheckCircle, AlertCircle} from 'lucide-react'
+import { useContactForm } from '../hooks/useContactForm'
 
 const Contact = () => {
   const { t } = useTranslation()
+  const { isSubmitting, submitStatus, errorMessage, submitForm, resetStatus } = useContactForm()
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,46 +23,32 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Create mailto link with form data
-    const subjectLabels: { [key: string]: string } = {
-      'architecture-cloud': t('contact.form.subjects.architectureCloud'),
-      'migration-aws': t('contact.form.subjects.migrationAws'),
-      'devops': t('contact.form.subjects.devops'),
-      'formation': t('contact.form.subjects.formation'),
-      'cto-partage': t('contact.form.subjects.ctoPartage'),
-      'autre': t('contact.form.subjects.autre')
-    }
-
-    const subject = `${formData.subject ? `[${subjectLabels[formData.subject]}] ` : ''}${t('contact.form.subjects.architectureCloud')}`
-    const body = `${t('common.contact')},
-
-${t('contact.form.name')}: ${formData.name}
-${t('contact.form.email')}: ${formData.email}
-${formData.company ? `${t('contact.form.company')}: ${formData.company}` : ''}
-
-${t('contact.form.message')}:
-${formData.message}
-
----
-${t('contact.form.required')}`
-
-    // Open email client
-    window.location.href = `mailto:${t('contact.contactInfo.email.value')}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    // Reset any previous status
+    resetStatus()
     
-    // Reset form after a short delay
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        subject: '',
-        message: ''
-      })
-    }, 1000)
+    // Submit the form using our custom hook
+    await submitForm(formData)
   }
+
+  // Reset form after successful submission
+  useEffect(() => {
+    if (submitStatus === 'success') {
+      const timer = setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: ''
+        })
+      }, 2000)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [submitStatus])
 
   const faqQuestions = t('contact.faq.questions', { returnObjects: true }) as Array<{question: string, answer: string}>
 
@@ -180,6 +169,25 @@ ${t('contact.form.required')}`
                   {t('contact.form.title')}
                 </h2>
                 
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                    <p className="text-green-700 font-medium">
+                      Message envoyé avec succès ! Merci de nous avoir contactés.
+                    </p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
+                    <AlertCircle className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
+                    <p className="text-red-700 font-medium">
+                      {errorMessage || 'Une erreur est survenue. Veuillez réessayer.'}
+                    </p>
+                  </div>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -193,7 +201,8 @@ ${t('contact.form.required')}`
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder={t('contact.form.placeholders.name')}
                       />
                     </div>
@@ -209,7 +218,8 @@ ${t('contact.form.required')}`
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent"
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder={t('contact.form.placeholders.email')}
                       />
                     </div>
@@ -225,7 +235,8 @@ ${t('contact.form.required')}`
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                       placeholder={t('contact.form.placeholders.company')}
                     />
                   </div>
@@ -240,7 +251,8 @@ ${t('contact.form.required')}`
                       required
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                     >
                       <option value="">{t('contact.form.placeholders.subject')}</option>
                       <option value="architecture-cloud">{t('contact.form.subjects.architectureCloud')}</option>
@@ -263,17 +275,19 @@ ${t('contact.form.required')}`
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent resize-none"
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracloud-orange focus:border-transparent resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                       placeholder={t('contact.form.placeholders.message')}
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full btn-primary flex items-center justify-center"
+                    disabled={isSubmitting}
+                    className="w-full btn-primary flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="h-5 w-5 mr-2" />
-                    {t('contact.form.send')}
+                    {isSubmitting ? 'Envoi en cours...' : t('contact.form.send')}
                   </button>
                 </form>
 

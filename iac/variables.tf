@@ -25,3 +25,8 @@ variable "subdomain" {
   description = "Subdomain (e.g., www, app, blog)"
   type        = string
 }
+
+variable "notification_email" {
+  description = "Email address to receive contact form notifications"
+  type        = string
+}

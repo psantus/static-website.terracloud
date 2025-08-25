@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-terracloud-orange hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-terracloud-orange text-terracloud-orange hover:bg-terracloud-orange hover:text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-terracloud-orange to-terracloud-blue bg-clip-text text-transparent;
+  }
+}
+
+/* Markdown content styling */
+.markdown-content {
+  @apply prose prose-lg max-w-none;
+}
+
+.markdown-content h1 {
+  @apply text-3xl font-bold text-terracloud-dark mb-6;
+}
+
+.markdown-content h2 {
+  @apply text-2xl font-semibold text-terracloud-dark mb-4 mt-8;
+}
+
+.markdown-content h3 {
+  @apply text-xl font-semibold text-terracloud-dark mb-3 mt-6;
+}
+
+.markdown-content p {
+  @apply text-terracloud-gray mb-4 leading-relaxed;
+}
+
+.markdown-content ul, .markdown-content ol {
+  @apply mb-4 pl-6;
+}
+
+.markdown-content li {
+  @apply mb-2 text-terracloud-gray;
+}
+
+.markdown-content a {
+  @apply text-terracloud-blue hover:text-terracloud-orange transition-colors;
+}
+
+.markdown-content code {
+  @apply bg-terracloud-dark text-white px-2 py-1 rounded text-sm font-mono;
+}
+
+.markdown-content pre {
+  @apply bg-terracloud-dark text-white p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.markdown-content pre code {
+  @apply bg-transparent text-white p-0;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-terracloud-orange pl-4 italic text-terracloud-gray bg-gray-50 py-2 my-4;
+}

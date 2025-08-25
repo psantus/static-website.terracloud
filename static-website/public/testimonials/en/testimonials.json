@@ -1,0 +1,29 @@
+[
+  {
+    "id": "startup-tech-dt",
+    "quote": "TerraCloud supported us professionally in our migration to AWS. Their technical expertise and pragmatic approach were decisive for the success of our project.",
+    "author": "Technical Director",
+    "company": "Tech Startup",
+    "avatar": "TD",
+    "sector": "Technology",
+    "project": "AWS Migration"
+  },
+  {
+    "id": "pme-innovante-dsi",
+    "quote": "TerraCloud's support on our cloud architecture significantly improved our performance and security. A very enriching collaboration.",
+    "author": "IT Director",
+    "company": "Innovative SME",
+    "avatar": "ID",
+    "sector": "Innovation",
+    "project": "Cloud Architecture"
+  },
+  {
+    "id": "scaleup-lead-dev",
+    "quote": "Paul brings remarkable strategic vision and technical expertise. His educational approach allowed us to quickly build our skills.",
+    "author": "Lead Developer",
+    "company": "Scale-up",
+    "avatar": "LD",
+    "sector": "Software",
+    "project": "Training & Consulting"
+  }
+]

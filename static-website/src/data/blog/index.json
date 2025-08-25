@@ -1,0 +1,304 @@
+{
+  "posts": [
+    {
+      "id": "aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers",
+      "title": "AWS User Group Poitiers : retour sur le Meetup «Serverless en PHP» avec l'AFUP Poitiers",
+      "description": "Lambda était à l'honneur lors de la dernière réunion du AWS User Group Poitiers, ainsi que Bref, un runtime PHP dédié à au serverless.",
+      "date": "2024-09-23",
+      "category": "blog",
+      "tags": [
+        "aws",
+        "aws user group",
+        "bref",
+        "lambda",
+        "php",
+        "Poitiers",
+        "serverless"
+      ],
+      "featuredImage": "/images/blog/1726812299969.jpeg",
+      "slug": "aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers"
+    },
+    {
+      "id": "architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets",
+      "title": "Architecture orientée événement : réconcilier Notifications et Evénements \"Complets\"",
+      "description": "Evénement minimaliste ou complet ? En architecture orientée événement, les différents modèles existent. Nous proposons ici une manière de réconcilier simplement les différentes approches",
+      "date": "2024-07-04",
+      "category": "blog",
+      "tags": [
+        "architecture",
+        "aws",
+        "event",
+        "event-driven architure",
+        "eventbridge"
+      ],
+      "featuredImage": "/images/blog/NotificationVsECST.png",
+      "slug": "architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets"
+    },
+    {
+      "id": "les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire",
+      "title": "Les objets de votre bucket S3 sont peut-être publics (même si la console AWS vous dit le contraire)",
+      "description": "S3 est un service de stockage incroyable, capable de stocker durablement des données à l'échelle. Dans cet article de blog, je vais vous montrer une manière peu connue par laquelle vos objets pourraient devenir publics par erreur .",
+      "date": "2024-05-02",
+      "category": "blog",
+      "tags": [
+        "aws",
+        "s3",
+        "sécurité"
+      ],
+      "featuredImage": "",
+      "slug": "les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire"
+    },
+    {
+      "id": "protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf",
+      "title": "Protégez vos applications des attaques avec AWS CloudFront et AWS WAF",
+      "description": "Le Cloud peut aussi rendre des services à l'infrastructure on-premise. Exemple avec AWS WAF, qui protège vos applications web des attaques.",
+      "date": "2024-03-18",
+      "category": "tech",
+      "tags": [
+        "aws",
+        "cloud",
+        "cloudfront",
+        "sécurité",
+        "waf",
+        "web application firewall"
+      ],
+      "featuredImage": "",
+      "slug": "protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf"
+    },
+    {
+      "id": "utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding",
+      "title": "Utilisez votre conteneur ECS (même sur Fargate) comme bastion pour accéder à votre base de donnée grâce au local port forwarding",
+      "description": "Utilisez ECS et Systems Manager pour faire du Local Port Forwarding vers un hôte distant",
+      "date": "2024-03-04",
+      "category": "blog",
+      "tags": [
+        "aws",
+        "bastion",
+        "cloud",
+        "container",
+        "docker",
+        "ecs",
+        "ssm",
+        "systemsmanager"
+      ],
+      "featuredImage": "/images/blog/ECS-local-port-forwarding.png",
+      "slug": "utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding"
+    },
+    {
+      "id": "cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops",
+      "title": "Cloud 101 - Episode 3 : 7 clés pour éviter le gâchis !💰 #FinOps",
+      "description": "Blague récurrente entre ingénieurs cloud : « ce qui coûte cher sur le cloud, ce n'est pas tant les ressources qu'on utilise que celles qu'on a oublié d'éteindre ». Lors d'une mission récente, cet adage s'est encore vérifié, puisque j'ai pu identifier en quelques heures plus de $20k d'économies mensuelles pour mon client (oui, parfois, on devrait négocier un intéressement). Dans cet article, je vous partage quelques bonnes pratiques FinOps pour éviter le gâchis.",
+      "date": "2024-02-12",
+      "category": "blog",
+      "tags": [
+        "aws",
+        "cloud",
+        "finops"
+      ],
+      "featuredImage": "/images/blog/29f15494-c167-4586-8e90-faaa11af450e.jpg",
+      "slug": "cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops"
+    },
+    {
+      "id": "etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2",
+      "title": "Étendre les fonctionnalités d'Amazon Connect avec Lambda et LexV2​",
+      "description": "Découvrez Amazon Connect, solution très riche de Centre d'appel et comment ses fonctionnalités peuvent encore être étendues grâce à Lambda et Lex. ​",
+      "date": "2023-11-15",
+      "category": "blog",
+      "tags": [
+        "AmazonConnect",
+        "AmazonLex",
+        "aws",
+        "AWSLambda",
+        "CentreDeContact",
+        "CX",
+        "RelationClient"
+      ],
+      "featuredImage": "/images/blog/AmazonConnect.jpg",
+      "slug": "etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2"
+    },
+    {
+      "id": "cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site",
+      "title": "Cloud 101 - Episode 2 - SysOps: 10 services pour votre infra sur site",
+      "description": "De plus en plus d'organisations adoptent en effet un modèle de cloud hybride, conservant sur site les applicatifs ayant des exigences plus faibles de scalabilité ou de haute disponibilité. Dans ce cadre, la valeur du cloud n'est pas limitée aux charges de travail qui y sont hébergées.",
+      "date": "2023-11-07",
+      "category": "opinion",
+      "tags": [
+        "aws",
+        "backup",
+        "bastion",
+        "cloud",
+        "inventaire",
+        "inventory",
+        "patchmanagement",
+        "pca",
+        "pra",
+        "sysops",
+        "systemsmanager"
+      ],
+      "featuredImage": "/images/blog/8d2a3e69-8e9c-40fa-b971-4a20809553aa.jpg",
+      "slug": "cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site"
+    },
+    {
+      "id": "cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud",
+      "title": "Cloud 101 - Episode 1 : quelle est la vraie valeur ajoutée du Cloud ?",
+      "description": "Envisager l'exploitation des services du Cloud peut être effrayant pour une organisation. La marche à franchir peut paraître haute (et coûteuse) et certains font des longs articles sur comment ils ont décidé de revenir en arrière après avoir (bêtement) dépensé des millions en coûts d'hébergement. Pourtant, loin d'être un gouffre, le Cloud peut être un facteur de gain important.",
+      "date": "2023-10-17",
+      "category": "opinion",
+      "tags": [
+        "agilité",
+        "cloud",
+        "métier",
+        "time-to-market",
+        "valeur"
+      ],
+      "featuredImage": "/images/blog/1493e733-0b84-4841-a6b3-118afaf98cf3.jpg",
+      "slug": "cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud"
+    },
+    {
+      "id": "make-or-buy-assemblez",
+      "title": "Make or buy? Assemblez !",
+      "description": "Acheter une solution d’éditeur ou la construire soi-même ? Voici une question qui revient fréquemment en DSI. La réponse classique distingue coeur et contexte, et invite à construire ses outils coeur de métier (sous-entendu : ceux qui sont différenciateurs) et acheter ce qui fait le contexte. Mais cette approche binaire résiste-t-elle à l’épreuve de l’expérience ?",
+      "date": "2023-09-26",
+      "category": "opinion",
+      "tags": [
+        "cloud",
+        "logiciel"
+      ],
+      "featuredImage": "/images/blog/1oYsp7VM9OfsizRMLFj0q2Q.webp",
+      "slug": "make-or-buy-assemblez"
+    },
+    {
+      "id": "cloud-agnostique-ou-cloud-natif",
+      "title": "Cloud-agnostique ou Cloud-natif ?",
+      "description": "De mes échanges avec de nombreux acteurs de l’informatique ressort la crainte d’être enfermé chez leur fournisseur. Cette crainte est-elle fondée ? Que gagne t-on à être “cloud-agnostic” ? à être “cloud-native” ?",
+      "date": "2023-09-13",
+      "category": "opinion",
+      "tags": [
+        "agnostique",
+        "cloud",
+        "natif",
+        "serverless"
+      ],
+      "featuredImage": "/images/blog/1PU734ueIiq84TT5LMfYShw.webp",
+      "slug": "cloud-agnostique-ou-cloud-natif"
+    },
+    {
+      "id": "lagilite-une-question-de-confiance-a-construire",
+      "title": "L’agilité, une question de confiance (à construire)",
+      "description": "J’ai eu la chance d’être initié à l’agilité au sein d’une équipe de développeurs aguerris. Plus tard, j’ai eu l’opportunité d’aider à démarrer cinq équipes de développement agiles. A partir de ces expériences, permettez-moi de vous dire en quoi la confiance est à la fois la condition de possibilité et le principal fruit de l’agilité.",
+      "date": "2023-07-02",
+      "category": "opinion",
+      "tags": [
+        "agilité",
+        "management",
+        "valeur"
+      ],
+      "featuredImage": "/images/blog/1vwXhNazWLYv6YK3BhDvw4g.webp",
+      "slug": "lagilite-une-question-de-confiance-a-construire"
+    },
+    {
+      "id": "deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb",
+      "title": "Déployer une API de stockage de données simple avec très peu de code en utilisant Amazon API Gateway et DynamoDB",
+      "description": "L'écosystème sans serveur AWS comprend de multiples services que les architectes et les développeurs peuvent exploiter pour créer des applications de micro-services : stockage (S3, DynamoDB), composants d'intégration (API Gateway, Eventbridge, SQS...) et, bien sûr, la possibilité d'exécuter du code personnalisé dans les fonctions Lambda.",
+      "date": "2022-12-17",
+      "category": "tech",
+      "tags": [
+        "api",
+        "apigateway",
+        "aws",
+        "cloud",
+        "DynamoDB"
+      ],
+      "featuredImage": "/images/blog/1tr77S3aYcNsNoDUszpMjjg.webp",
+      "slug": "deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb"
+    },
+    {
+      "id": "aws-reinvent-2022-notre-bilan",
+      "title": "AWS (re:Invent) 2022 : notre bilan",
+      "description": "AWS re:Invent 2022 est désormais terminé, et avec lui son lot habituel d'annonces de nouveaux produits, de keynotes et de sessions en petits groupes. Parmi tout cela, qu’est-ce qui ressort ? Que faut-il retenir ? Aujourd’hui, je partage mon bilan personnel de la re:Invent et, plus largement, mon point de vue sur la feuille de route AWS.",
+      "date": "2022-12-05",
+      "category": "opinion",
+      "tags": [
+        "aws",
+        "reinvent"
+      ],
+      "featuredImage": "/images/blog/1JJRxzwIHzTi2IR5RaW2Ywg.webp",
+      "slug": "aws-reinvent-2022-notre-bilan"
+    },
+    {
+      "id": "powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j",
+      "title": "PowerBI: déployer une passerelle sur AWS pour $0.12/j",
+      "description": "Aujourd’hui, je vais expliquer comment déployer une passerelle PowerBI fiable et fonctionnelle. En cadeau, des extraits de code et un repo GitHub pour déployer le tout en 5min avec Terraform 🙂",
+      "date": "2022-12-03",
+      "category": "tech",
+      "tags": [
+        "autoscalinggroup",
+        "aws",
+        "cloud",
+        "ec2",
+        "powerbi"
+      ],
+      "featuredImage": "/images/blog/architecture-diagram.png",
+      "slug": "powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j"
+    }
+  ],
+  "categories": [
+    "blog",
+    "tech",
+    "opinion"
+  ],
+  "tags": [
+    "AWSLambda",
+    "AmazonConnect",
+    "AmazonLex",
+    "CX",
+    "CentreDeContact",
+    "DynamoDB",
+    "Poitiers",
+    "RelationClient",
+    "agilité",
+    "agnostique",
+    "api",
+    "apigateway",
+    "architecture",
+    "autoscalinggroup",
+    "aws",
+    "aws user group",
+    "backup",
+    "bastion",
+    "bref",
+    "cloud",
+    "cloudfront",
+    "container",
+    "docker",
+    "ec2",
+    "ecs",
+    "event",
+    "event-driven architure",
+    "eventbridge",
+    "finops",
+    "inventaire",
+    "inventory",
+    "lambda",
+    "logiciel",
+    "management",
+    "métier",
+    "natif",
+    "patchmanagement",
+    "pca",
+    "php",
+    "powerbi",
+    "pra",
+    "reinvent",
+    "s3",
+    "serverless",
+    "ssm",
+    "sysops",
+    "systemsmanager",
+    "sécurité",
+    "time-to-market",
+    "valeur",
+    "waf",
+    "web application firewall"
+  ]
+}

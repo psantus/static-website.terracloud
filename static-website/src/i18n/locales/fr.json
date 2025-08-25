@@ -1,0 +1,812 @@
+{
+  "about": {
+    "title": "À propos - TerraCloud",
+    "description": "Découvrez TerraCloud, votre partenaire cloud basé à Poitiers. Expertise AWS, architecture logicielle et DevOps pour accompagner votre transformation digitale.",
+    "hero": {
+      "title": "À propos de TerraCloud",
+      "description": "Votre partenaire cloud basé à Poitiers pour accompagner votre transformation digitale avec expertise et pragmatisme.",
+      "location": "Basé à Poitiers, intervenant dans toute la France"
+    },
+    "stats": {
+      "experience": "Années d'expérience",
+      "projects": "Projets réalisés",
+      "satisfaction": "Clients satisfaits"
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "paragraphs": [
+        "TerraCloud est né de la conviction que le cloud doit être accessible à toutes les entreprises, quelle que soit leur taille. Fondée par Paul Santus, architecte cloud passionné, notre mission est d'accompagner les organisations dans leur transformation digitale.",
+        "Avec plus de 15 ans d'expérience dans l'architecture logicielle et le cloud computing, nous avons développé une expertise reconnue sur AWS et les technologies DevOps. Notre approche pragmatique nous permet de livrer des solutions robustes et évolutives.",
+        "Basés à Poitiers, nous intervenons dans toute la France pour accompagner startups, PME et grandes entreprises dans leurs projets cloud les plus ambitieux."
+      ]
+    },
+    "certifications": {
+      "title": "Certifications & Expertise",
+      "aws": "Toutes les 12 certifications AWS",
+      "details": "Solutions Architect Professional, DevOps Engineer Professional, Security Specialty, et 9 autres certifications AWS"
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Les principes qui guident notre approche et notre relation avec nos clients",
+      "items": [
+        {
+          "title": "Pragmatisme",
+          "description": "Nous privilégions les solutions simples et efficaces qui répondent réellement à vos besoins."
+        },
+        {
+          "title": "Accompagnement",
+          "description": "Nous ne nous contentons pas de livrer, nous formons vos équipes pour qu'elles soient autonomes."
+        },
+        {
+          "title": "Qualité",
+          "description": "Nous appliquons les meilleures pratiques pour garantir la robustesse et la maintenabilité."
+        },
+        {
+          "title": "Excellence",
+          "description": "Nous nous tenons constamment à jour des dernières technologies et méthodologies."
+        }
+      ]
+    },
+    "team": {
+      "title": "Notre Équipe",
+      "subtitle": "Une expertise technique au service de vos projets",
+      "paul": {
+        "name": "Paul Santus",
+        "role": "Fondateur & Architecte Cloud Senior",
+        "description": "Consultant indépendant (freelance), architecte cloud AWS, Paul SANTUS accompagne depuis 15 ans les organisations, DSI et éditeurs dans leur transformation digitale. Détenteur de toutes les 12 certifications AWS, il apporte son expertise technique et sa vision stratégique à chaque projet."
+      }
+    },
+    "references": {
+      "title": "Ils nous font confiance",
+      "description": "Startups, PME et grandes entreprises de tous secteurs nous font confiance pour leur transformation cloud. Découvrez quelques-unes de nos références clients.",
+      "cta": "Voir toutes nos références"
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Démocratiser l'accès au cloud et accompagner les entreprises dans leur transformation digitale avec des solutions pragmatiques, sécurisées et évolutives.",
+      "quote": "Les deux pieds sur terre, la tête dans le Cloud",
+      "cta1": "Découvrir nos services",
+      "cta2": "Prendre rendez-vous"
+    }
+  },
+  "appointment": {
+    "title": "Prendre rendez-vous - TerraCloud",
+    "description": "Planifiez un appel gratuit avec nos experts cloud. Discutons de votre projet et découvrons comment nous pouvons vous aider.",
+    "hero": {
+      "title": "Prendre Rendez-vous",
+      "description": "Planifiez un appel gratuit de 30 minutes avec nos experts cloud. Discutons de votre projet et découvrons comment nous pouvons vous aider.",
+      "benefits": "Consultation gratuite • Sans engagement • Réponse sous 24h"
+    },
+    "whySchedule": "Pourquoi prendre rendez-vous ?",
+    "benefitsList": [
+      {
+        "title": "Évaluation gratuite de vos besoins",
+        "description": "Nous analysons votre situation actuelle et identifions les opportunités d'amélioration."
+      },
+      {
+        "title": "Recommandations personnalisées",
+        "description": "Nous vous proposons des solutions adaptées à votre contexte et vos contraintes."
+      },
+      {
+        "title": "Feuille de route claire",
+        "description": "Nous établissons ensemble un plan d'action concret pour atteindre vos objectifs."
+      },
+      {
+        "title": "Estimation budgétaire",
+        "description": "Nous vous donnons une idée claire des investissements nécessaires."
+      }
+    ],
+    "meetingTypes": {
+      "title": "Modalités de rendez-vous",
+      "video": "Visioconférence",
+      "phone": "Appel téléphonique",
+      "onsite": "Sur site"
+    },
+    "booking": {
+      "title": "Planifier votre rendez-vous",
+      "description": "Cliquez sur le bouton ci-dessous pour accéder à notre calendrier de réservation et choisir le créneau qui vous convient le mieux.",
+      "openCalendar": "Ouvrir le calendrier de réservation",
+      "chooseSlot": "Choisissez votre créneau",
+      "close": "Fermer",
+      "iframeTitle": "Réserver un rendez-vous",
+      "alternativeContact": "Vous pouvez également nous contacter directement à"
+    }
+  },
+  "blog": {
+    "title": "Blog - TerraCloud",
+    "description": "Articles et actualités sur le cloud AWS, DevOps et l'architecture logicielle",
+    "hero": {
+      "title": "Blog",
+      "description": "Solutions techniques mises en oeuvre par Terracloud sur AWS, ou articles d'opinion concernant l'IT et le management, suivez notre blog pour mieux nous connaître."
+    },
+    "search": {
+      "placeholder": "Rechercher un article..."
+    },
+    "filters": {
+      "allCategories": "Toutes les catégories",
+      "allTags": "Tous les tags"
+    },
+    "categories": {
+      "tech": "Technique",
+      "opinion": "Opinion",
+      "blog": "Blog"
+    },
+    "readMore": "Lire la suite",
+    "backToBlog": "Retour au blog",
+    "readingTime": "min de lecture",
+    "publishedOn": "Publié le",
+    "moreTags": "autres",
+    "noResults": "Aucun article ne correspond à vos critères de recherche.",
+    "resetFilters": "Réinitialiser les filtres",
+    "loadingPosts": "Chargement des articles..."
+  },
+  "certifications": {
+    "title": "Certifications & Expertise",
+    "aws": "Toutes les 12 certifications AWS",
+    "details": "Solutions Architect Professional, DevOps Engineer Professional, Security Specialty, et 9 autres certifications AWS"
+  },
+  "common": {
+    "readMore": "En savoir plus",
+    "learnMore": "En savoir plus",
+    "contact": "Nous contacter",
+    "appointment": "Prendre rendez-vous",
+    "backToServices": "Retour aux services",
+    "backToTop": "Retour en haut",
+    "viewAllServices": "Voir tous les services",
+    "planExchange": "Planifier un échange",
+    "discussProject": "Discutons de votre projet",
+    "bookAppointment": "Prendre rendez-vous",
+    "scheduleCall": "Planifier un appel gratuit",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "tryAgain": "Réessayer",
+    "close": "Fermer",
+    "menu": "Menu",
+    "toggleMenu": "Basculer le menu",
+    "required": "Obligatoire",
+    "optional": "Optionnel"
+  },
+  "contact": {
+    "title": "Nous contacter - TerraCloud",
+    "description": "Contactez TerraCloud pour discuter de votre projet cloud. Basé à Poitiers, nous intervenons dans toute la France.",
+    "hero": {
+      "title": "Nous Contacter",
+      "description": "Vous avez un projet cloud ? Parlons-en ! Nous sommes là pour vous accompagner dans votre transformation digitale."
+    },
+    "stayInTouch": "Restons en contact",
+    "contactInfo": {
+      "email": {
+        "title": "Email",
+        "value": "contact@terracloud.fr"
+      },
+      "phone": {
+        "title": "Téléphone",
+        "value": "+33 6 26 08 70 41"
+      },
+      "location": {
+        "title": "Localisation",
+        "value": "Poitiers, France",
+        "subtitle": "Interventions dans toute la France"
+      },
+      "hours": {
+        "title": "Horaires",
+        "value": "Lundi - Vendredi : 9h00 - 18h00",
+        "subtitle": "Réponse sous 24h"
+      }
+    },
+    "quickActions": {
+      "title": "Besoin d'une réponse rapide ?",
+      "appointment": "Prendre rendez-vous",
+      "email": "Envoyer un email"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom complet",
+      "email": "Email",
+      "company": "Entreprise",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "required": "* Champs obligatoires. Nous nous engageons à répondre sous 24h.",
+      "placeholders": {
+        "name": "Votre nom",
+        "email": "votre@email.com",
+        "company": "Nom de votre entreprise",
+        "subject": "Sélectionnez un sujet",
+        "message": "Décrivez votre projet ou vos besoins..."
+      },
+      "subjects": {
+        "architectureCloud": "Architecture Cloud",
+        "migrationAws": "Migration AWS",
+        "devops": "DevOps & Automatisation",
+        "formation": "Formation",
+        "ctoPartage": "CTO à temps partagé",
+        "autre": "Autre"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Les réponses aux questions les plus courantes",
+      "questions": [
+        {
+          "question": "Dans quelles régions intervenez-vous ?",
+          "answer": "Basés à Poitiers, nous intervenons dans toute la France. Nous proposons des interventions sur site ou en distanciel selon vos besoins et préférences."
+        },
+        {
+          "question": "Quel est votre délai de réponse ?",
+          "answer": "Nous nous engageons à répondre à toute demande sous 24h ouvrées. Pour les urgences, n'hésitez pas à nous appeler directement."
+        },
+        {
+          "question": "Proposez-vous des devis gratuits ?",
+          "answer": "Oui, nous proposons une première consultation gratuite pour évaluer vos besoins et vous proposer une solution adaptée."
+        }
+      ]
+    }
+  },
+  "customerReferences": {
+    "title": "Ils nous font confiance - Références clients - TerraCloud",
+    "description": "Retrouvez les principales références clients de TerraCloud ! Ils nous font confiance, et vous devriez aussi !",
+    "hero": {
+      "title": "Ils nous font confiance",
+      "description": "Découvrez quelques références client de TerraCloud. Startups, PME et grandes entreprises de tous secteurs nous font confiance pour leur transformation cloud."
+    },
+    "stats": [
+      {
+        "number": "15+",
+        "label": "Clients accompagnés",
+        "description": "Startups, PME et grandes entreprises"
+      },
+      {
+        "number": "100+",
+        "label": "Personnes formées",
+        "description": "Développeurs, architectes, QA, infrastructure, SysOps, FinOps"
+      },
+      {
+        "number": "15",
+        "label": "Années d'expérience",
+        "description": "Au service de la transformation digitale"
+      },
+      {
+        "number": "100%",
+        "label": "Clients satisfaits",
+        "description": "Taux de recommandation"
+      }
+    ],
+    "testimonials": {
+      "title": "Ce qu'ils disent de nous",
+      "subtitle": "Les témoignages de nos clients reflètent notre engagement à livrer des solutions de qualité",
+      "noTestimonials": "Aucun témoignage disponible pour le moment."
+    },
+    "clients": {
+      "title": "Nos références client",
+      "subtitle": "Une sélection de nos clients qui nous font confiance pour leurs projets cloud"
+    },
+    "sectors": {
+      "title": "Secteurs d'activité",
+      "subtitle": "Nous accompagnons des entreprises dans de nombreux secteurs d'activité",
+      "list": [
+        "Fintech & Finance",
+        "Santé & Biotechnologies",
+        "E-commerce & Retail",
+        "Industrie & Manufacturing",
+        "Services numériques",
+        "Formation & Éducation",
+        "IoT & Technologies",
+        "Startups & Scale-ups"
+      ]
+    },
+    "cta": {
+      "title": "Rejoignez nos clients satisfaits",
+      "description": "Vous aussi, faites confiance à TerraCloud pour votre transformation cloud. Discutons de votre projet lors d'un premier échange gratuit.",
+      "cta1": "Prendre rendez-vous",
+      "cta2": "Découvrir nos services"
+    }
+  },
+  "description": "Découvrez TerraCloud, votre partenaire cloud basé à Poitiers. Expertise AWS, architecture logicielle et DevOps pour accompagner votre transformation digitale.",
+  "footer": {
+    "description": "Basé à Poitiers, TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops.",
+    "services": "Services",
+    "quickLinks": "Liens rapides",
+    "company": "Entreprise",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "copyright": "© 2024 TerraCloud. Tous droits réservés.",
+    "madeWith": "Fait avec ❤️ à Poitiers"
+  },
+  "hero": {
+    "title": "À propos de TerraCloud",
+    "description": "Votre partenaire cloud basé à Poitiers pour accompagner votre transformation digitale avec expertise et pragmatisme.",
+    "location": "Basé à Poitiers, intervenant dans toute la France"
+  },
+  "home": {
+    "title": "TerraCloud - Expertise Cloud AWS et DevOps à Poitiers",
+    "description": "TerraCloud accompagne les entreprises dans leur transformation cloud avec AWS. Architecture, migration, DevOps et formation. Basé à Poitiers.",
+    "hero": {
+      "tagline1": "Les deux pieds sur terre,",
+      "tagline2": "la tête dans le Cloud",
+      "description": "TerraCloud accompagne les entreprises dans leur transformation cloud avec AWS. Architecture, migration, DevOps et formation personnalisée.",
+      "cta1": "Prendre rendez-vous",
+      "cta2": "Découvrir nos services",
+      "altText": "Paul Santus - Fondateur TerraCloud"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Nous accompagnons les entreprises dans toutes les étapes de leur transformation cloud",
+      "architectureCloud": {
+        "title": "Architecture Cloud AWS",
+        "description": "Conception et mise en place d'architectures cloud scalables et sécurisées sur AWS."
+      },
+      "devops": {
+        "title": "DevOps & Automatisation",
+        "description": "Mise en place de pipelines CI/CD et automatisation de vos déploiements."
+      },
+      "migration": {
+        "title": "Migration vers AWS",
+        "description": "Accompagnement complet pour migrer vos applications vers le cloud AWS."
+      },
+      "training": {
+        "title": "Formation AWS",
+        "description": "Formation de vos équipes aux technologies et bonnes pratiques AWS."
+      }
+    },
+    "whyChoose": {
+      "title": "Pourquoi choisir TerraCloud ?",
+      "description": "Notre expertise technique combinée à une approche pragmatique nous permet d'accompagner efficacement nos clients dans leur transformation cloud.",
+      "benefits": [
+        "Expertise AWS certifiée",
+        "Accompagnement personnalisé",
+        "Solutions scalables et sécurisées",
+        "Support continu",
+        "Optimisation des coûts",
+        "Transfert de compétences"
+      ],
+      "stats": {
+        "experience": "Années d'expérience",
+        "clients": "Clients accompagnés",
+        "trained": "Personnes formées"
+      },
+      "learnMore": "En savoir plus sur nous"
+    },
+    "cta": {
+      "title": "Prêt à transformer votre infrastructure ?",
+      "description": "Discutons de votre projet et découvrons ensemble comment le cloud peut accélérer votre croissance et optimiser vos coûts.",
+      "cta1": "Planifier un appel gratuit",
+      "cta2": "Nous contacter"
+    }
+  },
+  "legal": {
+    "title": "Mentions légales - TerraCloud",
+    "description": "Mentions légales de TerraCloud - Informations légales et conditions d'utilisation du site.",
+    "heading": "Mentions Légales",
+    "companyInfo": {
+      "title": "Informations légales",
+      "name": "Raison sociale",
+      "type": "Forme juridique",
+      "typeValue": "Entreprise individuelle",
+      "address": "Siège social",
+      "addressValue": "Poitiers, France",
+      "email": "Email",
+      "phone": "Téléphone",
+      "director": "Directeur de publication"
+    }
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "description": "Démocratiser l'accès au cloud et accompagner les entreprises dans leur transformation digitale avec des solutions pragmatiques, sécurisées et évolutives.",
+    "quote": "Les deux pieds sur terre, la tête dans le Cloud",
+    "cta1": "Découvrir nos services",
+    "cta2": "Prendre rendez-vous"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact",
+    "appointment": "Prendre rendez-vous",
+    "allServices": "Tous les services",
+    "servicesList": {
+      "devops": "DevOps",
+      "partTimeCTO": "CTO à temps partagé",
+      "cloudStart": "Démarrer sur le cloud",
+      "awsArchitect": "Architecte solutions AWS",
+      "softwareArchitecture": "Architecture logicielle",
+      "awsMigration": "Migration vers AWS",
+      "awsTraining": "Formation AWS"
+    },
+    "aboutPages": {
+      "about": "À propos",
+      "references": "Ils nous font confiance"
+    }
+  },
+  "notFound": {
+    "title": "Page non trouvée - TerraCloud",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "heading": "Page non trouvée",
+    "message": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée. Elle a peut-être migré vers le cloud ! ☁️",
+    "backHome": "Retour à l'accueil",
+    "previousPage": "Page précédente",
+    "suggestions": {
+      "title": "Peut-être cherchez-vous :",
+      "services": "Nos services",
+      "blog": "Notre blog",
+      "about": "À propos de nous",
+      "contact": "Nous contacter"
+    },
+    "help": {
+      "question": "Vous ne trouvez pas ce que vous cherchez ?",
+      "contact": "Contactez-nous pour obtenir de l'aide"
+    }
+  },
+  "references": {
+    "title": "Ils nous font confiance",
+    "description": "Startups, PME et grandes entreprises de tous secteurs nous font confiance pour leur transformation cloud. Découvrez quelques-unes de nos références clients.",
+    "cta": "Voir toutes nos références"
+  },
+  "services": {
+    "title": "Services - TerraCloud",
+    "description": "Basé à Poitiers, TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops.",
+    "hero": {
+      "title": "Nos Services",
+      "description": "Basé à Poitiers, TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops.",
+      "cta1": "Discutons de votre projet",
+      "cta2": "Nous contacter"
+    },
+    "whatWeOffer": "Ce que nous proposons :",
+    "devops": {
+      "title": "DevOps",
+      "description": "Mise en place de pipelines CI/CD, automatisation des déploiements et optimisation des processus de développement.",
+      "features": [
+        "Pipelines CI/CD avec GitHub Actions, GitLab CI",
+        "Infrastructure as Code (Terraform, CloudFormation)",
+        "Containerisation avec Docker et Amazon ECS",
+        "Monitoring et observabilité"
+      ],
+      "pageTitle": "DevOps - Services TerraCloud",
+      "pageDescription": "Services DevOps : CI/CD, Infrastructure as Code, containerisation et monitoring. Automatisez vos déploiements avec TerraCloud.",
+      "hero": {
+        "title": "DevOps & Automatisation",
+        "description": "Accélérez vos déploiements et améliorez la qualité de vos applications avec nos services DevOps. De l'automatisation des pipelines CI/CD à la containerisation, nous transformons votre processus de développement.",
+        "cta1": "Discuter de votre projet",
+        "cta2": "Demander un devis"
+      },
+      "stats": {
+        "errorReduction": "Réduction des erreurs",
+        "faster": "Plus rapide",
+        "monitoring": "Monitoring",
+        "automated": "Automatisé"
+      },
+      "servicesSection": {
+        "title": "Nos Services DevOps",
+        "subtitle": "Une approche complète pour transformer votre processus de développement et de déploiement"
+      },
+      "services": [
+        {
+          "title": "CI/CD Pipelines",
+          "description": "Mise en place de pipelines d'intégration et de déploiement continus avec GitHub Actions, GitLab CI, ou Jenkins."
+        },
+        {
+          "title": "Infrastructure as Code",
+          "description": "Automatisation de votre infrastructure avec Terraform et CloudFormation pour une gestion versionnée."
+        },
+        {
+          "title": "Containerisation",
+          "description": "Migration vers Docker et orchestration avec Amazon ECS pour une scalabilité optimale."
+        },
+        {
+          "title": "Monitoring & Observabilité",
+          "description": "Mise en place de solutions de monitoring avec CloudWatch, Prometheus, Grafana pour une visibilité complète."
+        }
+      ],
+      "benefits": [
+        "Réduction du time-to-market",
+        "Amélioration de la qualité logicielle",
+        "Diminution des erreurs de déploiement",
+        "Scalabilité automatique",
+        "Réduction des coûts opérationnels",
+        "Amélioration de la collaboration équipes"
+      ],
+      "benefitsSection": {
+        "title": "Pourquoi adopter DevOps ?",
+        "subtitle": "Le DevOps transforme la façon dont vous développez, testez et déployez vos applications. Découvrez les bénéfices concrets pour votre organisation."
+      },
+      "process": {
+        "title": "Processus DevOps",
+        "steps": [
+          {
+            "title": "Plan & Code",
+            "description": "Planification et développement"
+          },
+          {
+            "title": "Build & Test",
+            "description": "Construction et tests automatisés"
+          },
+          {
+            "title": "Deploy & Release",
+            "description": "Déploiement automatisé"
+          },
+          {
+            "title": "Monitor & Operate",
+            "description": "Surveillance et maintenance"
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies & Outils",
+        "subtitle": "Nous maîtrisons les outils les plus performants de l'écosystème DevOps"
+      },
+      "approach": {
+        "title": "Notre Approche",
+        "subtitle": "Une méthodologie éprouvée pour transformer votre processus de développement",
+        "steps": [
+          {
+            "title": "Audit & Analyse",
+            "description": "Évaluation de votre processus actuel et identification des points d'amélioration."
+          },
+          {
+            "title": "Implémentation",
+            "description": "Mise en place progressive des outils et processus DevOps adaptés à votre contexte."
+          },
+          {
+            "title": "Optimisation",
+            "description": "Formation des équipes et optimisation continue des processus mis en place."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Prêt à transformer vos processus ?",
+        "description": "Discutons de votre situation actuelle et découvrons ensemble comment DevOps peut accélérer votre développement et améliorer la qualité de vos applications.",
+        "cta1": "Planifier un audit gratuit",
+        "cta2": "Demander plus d'informations"
+      }
+    },
+    "partTimeCTO": {
+      "title": "CTO à temps partagé",
+      "description": "Accompagnement stratégique et technique pour les startups et PME qui ont besoin d'expertise technique senior.",
+      "features": [
+        "Définition de la stratégie technique",
+        "Architecture et choix technologiques",
+        "Management d'équipes techniques",
+        "Recrutement et formation"
+      ],
+      "pageTitle": "CTO à Temps Partagé - Services TerraCloud",
+      "pageDescription": "Services de CTO à temps partagé pour startups et PME. Stratégie technique, management d'équipe et accompagnement dans la croissance.",
+      "hero": {
+        "title": "CTO à Temps Partagé",
+        "description": "Bénéficiez de l'expertise d'un CTO senior sans les contraintes d'un recrutement full-time. Stratégie technique, management d'équipe et accompagnement dans votre croissance.",
+        "cta1": "Discuter de vos besoins",
+        "cta2": "En savoir plus"
+      },
+      "stats": {
+        "experience": "Années d'expérience",
+        "projects": "Projets accompagnés",
+        "teams": "Équipes managées",
+        "satisfaction": "Clients satisfaits"
+      },
+      "servicesSection": {
+        "title": "Mes Services de CTO",
+        "subtitle": "Un accompagnement complet pour structurer et faire grandir votre organisation technique"
+      },
+      "services": [
+        {
+          "title": "Stratégie Technique",
+          "description": "Définition de la roadmap technique et des choix technologiques alignés avec vos objectifs business."
+        },
+        {
+          "title": "Architecture & Design",
+          "description": "Conception d'architectures scalables et maintenables pour supporter votre croissance."
+        },
+        {
+          "title": "Management d'Équipe",
+          "description": "Encadrement et développement de vos équipes techniques pour maximiser leur performance."
+        },
+        {
+          "title": "Recrutement & Formation",
+          "description": "Aide au recrutement de talents techniques et mise en place de programmes de formation."
+        }
+      ],
+      "benefits": [
+        "Expertise senior sans les coûts d'un CTO full-time",
+        "Vision stratégique et opérationnelle",
+        "Accélération du développement produit",
+        "Amélioration de la qualité technique",
+        "Optimisation des processus de développement",
+        "Accompagnement dans la levée de fonds"
+      ],
+      "benefitsSection": {
+        "title": "Pourquoi Choisir un CTO à Temps Partagé ?",
+        "subtitle": "Une solution flexible et économique pour bénéficier d'une expertise CTO senior adaptée à vos besoins et votre budget."
+      },
+      "idealProfile": {
+        "title": "Profil Idéal",
+        "items": [
+          "Startup en phase de croissance",
+          "PME avec équipe technique < 20 personnes",
+          "Besoin d'expertise senior ponctuelle",
+          "Préparation levée de fonds",
+          "Structuration organisation technique"
+        ]
+      },
+      "methodology": {
+        "title": "Ma Méthodologie",
+        "subtitle": "Une approche structurée pour maximiser l'impact de mon intervention",
+        "steps": [
+          {
+            "step": "01",
+            "title": "Audit Technique",
+            "description": "Évaluation complète de votre stack technique, processus et équipes."
+          },
+          {
+            "step": "02",
+            "title": "Stratégie & Roadmap",
+            "description": "Définition d'une stratégie technique alignée avec vos objectifs business."
+          },
+          {
+            "step": "03",
+            "title": "Mise en Œuvre",
+            "description": "Accompagnement dans l'exécution de la roadmap et le management des équipes."
+          },
+          {
+            "step": "04",
+            "title": "Suivi & Optimisation",
+            "description": "Monitoring des KPIs techniques et ajustements continus de la stratégie."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Prêt à Structurer Votre Organisation Technique ?",
+        "description": "Discutons de vos défis techniques et découvrons comment je peux vous accompagner en tant que CTO à temps partagé.",
+        "cta1": "Planifier un échange",
+        "cta2": "Nous contacter"
+      }
+    },
+    "cloudStart": {
+      "title": "Démarrer sur le cloud",
+      "description": "Accompagnement pour vos premiers pas sur AWS avec une approche pragmatique et sécurisée.",
+      "features": [
+        "Audit de l'existant et recommandations",
+        "Mise en place des bonnes pratiques",
+        "Formation des équipes",
+        "Support pendant la transition"
+      ]
+    },
+    "awsArchitect": {
+      "title": "Architecte solutions AWS",
+      "description": "Conception d'architectures cloud robustes, scalables et sécurisées sur Amazon Web Services.",
+      "features": [
+        "Architecture multi-tiers et microservices",
+        "Haute disponibilité et disaster recovery",
+        "Sécurité et conformité",
+        "Optimisation des performances"
+      ]
+    },
+    "softwareArchitecture": {
+      "title": "Architecture logicielle",
+      "description": "Conception d'architectures logicielles modernes, maintenables et évolutives.",
+      "features": [
+        "Architecture hexagonale et clean architecture",
+        "Patterns de conception et bonnes pratiques",
+        "Refactoring et modernisation",
+        "Code review et mentoring"
+      ]
+    },
+    "awsMigration": {
+      "title": "Migration vers AWS",
+      "description": "Accompagnement complet pour migrer vos applications et données vers le cloud AWS.",
+      "features": [
+        "Stratégie de migration (6R)",
+        "Migration des bases de données",
+        "Modernisation des applications",
+        "Validation et tests"
+      ]
+    },
+    "awsTraining": {
+      "title": "Formation AWS",
+      "description": "Formez vos équipes sur AWS avec un formateur agréé (AAI). Formations certifiantes éligibles au financement, dispensées par des organismes agréés (ATP).",
+      "features": [
+        "Formations certifiantes AWS",
+        "Ateliers pratiques hands-on",
+        "Formation sur site ou à distance",
+        "Contenu adapté à vos besoins"
+      ],
+      "hero": {
+        "title": "Formation AWS",
+        "description": "Formateur agréé par AWS (AAI), je travaille avec divers organismes de formation agréés (ATP) pour vous délivrer une formation de qualité, éligible aux divers mécanismes de financement.",
+        "cta1": "Demander un devis",
+        "cta2": "Nous contacter"
+      },
+      "benefits": {
+        "title": "Pourquoi Choisir Nos Formations AWS ?",
+        "subtitle": "Une approche professionnelle avec les garanties de qualité AWS",
+        "items": [
+          {
+            "title": "Formateur Agréé AWS (AAI)",
+            "description": "Formation dispensée par un AWS Authorized Instructor certifié"
+          },
+          {
+            "title": "Contenu Officiel AWS",
+            "description": "Utilisation du matériel pédagogique officiel AWS"
+          },
+          {
+            "title": "Organismes Agréés (ATP)",
+            "description": "Partenariat avec des Authorized Training Partners"
+          },
+          {
+            "title": "Éligible au Financement",
+            "description": "Formations éligibles aux dispositifs de financement (CPF, OPCO, etc.)"
+          }
+        ]
+      },
+      "programs": {
+        "title": "Programmes de Formation",
+        "subtitle": "Des parcours adaptés à chaque profil et niveau d'expertise"
+      },
+      "formats": {
+        "title": "Formats de Formation",
+        "subtitle": "Choisissez le format qui convient le mieux à vos contraintes"
+      },
+      "cta": {
+        "title": "Prêt à Former Vos Équipes ?",
+        "description": "Contactez-nous pour discuter de vos besoins en formation et obtenir un devis personnalisé.",
+        "cta1": "Demander un devis",
+        "cta2": "Nous contacter"
+      }
+    },
+    "cta": {
+      "title": "Prêt à démarrer votre projet ?",
+      "description": "Contactez-nous pour discuter de vos besoins et découvrir comment nous pouvons vous accompagner dans votre transformation cloud.",
+      "cta1": "Planifier un échange",
+      "cta2": "Nous contacter"
+    },
+    "levels": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    }
+  },
+  "stats": {
+    "experience": "Années d'expérience",
+    "projects": "Projets réalisés",
+    "satisfaction": "Clients satisfaits"
+  },
+  "story": {
+    "title": "Notre Histoire",
+    "paragraphs": [
+      "TerraCloud est né de la conviction que le cloud doit être accessible à toutes les entreprises, quelle que soit leur taille. Fondée par Paul Santus, architecte cloud passionné, notre mission est d'accompagner les organisations dans leur transformation digitale.",
+      "Avec plus de 15 ans d'expérience dans l'architecture logicielle et le cloud computing, nous avons développé une expertise reconnue sur AWS et les technologies DevOps. Notre approche pragmatique nous permet de livrer des solutions robustes et évolutives.",
+      "Basés à Poitiers, nous intervenons dans toute la France pour accompagner startups, PME et grandes entreprises dans leurs projets cloud les plus ambitieux."
+    ]
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "subtitle": "Une expertise technique au service de vos projets",
+    "paul": {
+      "name": "Paul Santus",
+      "role": "Fondateur & Architecte Cloud Senior",
+      "description": "Consultant indépendant (freelance), architecte cloud AWS, Paul SANTUS accompagne depuis 15 ans les organisations, DSI et éditeurs dans leur transformation digitale. Détenteur de toutes les 12 certifications AWS, il apporte son expertise technique et sa vision stratégique à chaque projet."
+    }
+  },
+  "title": "À propos - TerraCloud",
+  "values": {
+    "title": "Nos Valeurs",
+    "subtitle": "Les principes qui guident notre approche et notre relation avec nos clients",
+    "items": [
+      {
+        "title": "Pragmatisme",
+        "description": "Nous privilégions les solutions simples et efficaces qui répondent réellement à vos besoins."
+      },
+      {
+        "title": "Accompagnement",
+        "description": "Nous ne nous contentons pas de livrer, nous formons vos équipes pour qu'elles soient autonomes."
+      },
+      {
+        "title": "Qualité",
+        "description": "Nous appliquons les meilleures pratiques pour garantir la robustesse et la maintenabilité."
+      },
+      {
+        "title": "Excellence",
+        "description": "Nous nous tenons constamment à jour des dernières technologies et méthodologies."
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+# Netlify redirects file for SEO migration from WordPress to React
+# This ensures all old URLs redirect properly to maintain SEO rankings
+
+# SPECIFIC BLOG POST REDIRECTS (WordPress date-based → slug-based)
+# 2024 posts
+/blog/2024/03/04/architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets/*  /blog/architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets  301
+/blog/2024/09/23/aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers/*  /blog/aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers  301
+
+# 2023 posts
+/blog/2023/01/09/cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud/*  /blog/cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud  301
+/blog/2023/01/16/cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site/*  /blog/cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site  301
+/blog/2023/01/23/cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops/*  /blog/cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops  301
+/blog/2023/02/06/cloud-agnostique-ou-cloud-natif/*  /blog/cloud-agnostique-ou-cloud-natif  301
+/blog/2023/02/13/etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2/*  /blog/etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2  301
+/blog/2023/02/20/lagilite-une-question-de-confiance-a-construire/*  /blog/lagilite-une-question-de-confiance-a-construire  301
+/blog/2023/02/27/les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire/*  /blog/les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire  301
+/blog/2023/03/06/make-or-buy-assemblez/*  /blog/make-or-buy-assemblez  301
+/blog/2023/03/13/protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf/*  /blog/protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf  301
+/blog/2023/03/20/utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding/*  /blog/utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding  301
+
+# 2022 posts
+/blog/2022/12/03/powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j/*  /blog/powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j  301
+/blog/2022/12/05/aws-reinvent-2022-notre-bilan/*  /blog/aws-reinvent-2022-notre-bilan  301
+/blog/2022/12/17/deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb/*  /blog/deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb  301
+
+# English versions (same pattern with /en prefix)
+/en/blog/2024/03/04/architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets/*  /en/blog/architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets  301
+/en/blog/2024/09/23/aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers/*  /en/blog/aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers  301
+/en/blog/2023/01/09/cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud/*  /en/blog/cloud-101-episode-1-quelle-est-la-vraie-valeur-ajoutee-du-cloud  301
+/en/blog/2023/01/16/cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site/*  /en/blog/cloud-101-episode-2-sysops-10-services-pour-votre-infra-sur-site  301
+/en/blog/2023/01/23/cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops/*  /en/blog/cloud-101-episode-3-7-cles-pour-eviter-le-gachis-💰-finops  301
+/en/blog/2023/02/06/cloud-agnostique-ou-cloud-natif/*  /en/blog/cloud-agnostique-ou-cloud-natif  301
+/en/blog/2023/02/13/etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2/*  /en/blog/etendez-les-capacites-damazon-connect-avec-lambda-et-lexv2  301
+/en/blog/2023/02/20/lagilite-une-question-de-confiance-a-construire/*  /en/blog/lagilite-une-question-de-confiance-a-construire  301
+/en/blog/2023/02/27/les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire/*  /en/blog/les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire  301
+/en/blog/2023/03/06/make-or-buy-assemblez/*  /en/blog/make-or-buy-assemblez  301
+/en/blog/2023/03/13/protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf/*  /en/blog/protegez-vos-applications-des-attaques-avec-aws-cloudfront-et-aws-waf  301
+/en/blog/2023/03/20/utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding/*  /en/blog/utilisez-votre-conteneur-ecs-meme-sur-fargate-comme-bastion-pour-acceder-a-votre-base-de-donnee-grace-au-local-port-forwarding  301
+/en/blog/2022/12/03/powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j/*  /en/blog/powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j  301
+/en/blog/2022/12/05/aws-reinvent-2022-notre-bilan/*  /en/blog/aws-reinvent-2022-notre-bilan  301
+/en/blog/2022/12/17/deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb/*  /en/blog/deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb  301
+
+# WordPress system URLs - redirect to home
+/wp-admin/*          /                    301
+/wp-content/*        /                    301
+/wp-json/*           /                    301
+/wp-login*           /                    301
+/xmlrpc.php          /                    301
+/robots.txt          /robots.txt          200
+/sitemap.xml         /sitemap.xml         200
+
+# WordPress feeds - redirect to blog
+/feed                /blog                301
+/feed/               /blog                301
+/en/feed             /en/blog             301
+/en/feed/            /en/blog             301
+
+# WordPress comments - redirect to contact
+/comments            /nous-contacter      301
+/comments/           /nous-contacter      301
+/en/comments         /en/nous-contacter   301
+/en/comments/        /en/nous-contacter   301
+
+# WordPress blog pagination - redirect to main blog
+/blog/page/*         /blog                301
+/en/blog/page/*      /en/blog             301
+
+# WordPress categories - redirect to blog
+/blog/category/*     /blog                301
+/en/blog/category/*  /en/blog             301
+
+# WordPress tags - redirect to blog
+/blog/tag/*          /blog                301
+/en/blog/tag/*       /en/blog             301
+
+# WordPress date archives - redirect to blog (catch remaining date patterns)
+/blog/2024/*         /blog                301
+/blog/2023/*         /blog                301
+/blog/2022/*         /blog                301
+/en/blog/2024/*      /en/blog             301
+/en/blog/2023/*      /en/blog             301
+/en/blog/2022/*      /en/blog             301
+
+# Author pages - redirect to about
+/psantus/*           /a-propos            301
+/en/psantus/*        /en/a-propos         301
+/author/*            /a-propos            301
+/en/author/*         /en/a-propos         301
+
+# Remove trailing slashes (WordPress → React Router)
+/*/                  /:splat              301
+
+# Catch-all for any remaining WordPress URLs
+# This should be last to avoid conflicts
+/wp-*                /                    301

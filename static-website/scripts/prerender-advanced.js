@@ -88,8 +88,8 @@ function generateStructuredData(route) {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "TerraCloud",
-    "url": "https://web.terracloud.fr",
-    "logo": "https://web.terracloud.fr/logo-orange.png",
+    "url": "https://www.terracloud.fr",
+    "logo": "https://www.terracloud.fr/logo-orange.png",
     "description": "TerraCloud accompagne ses clients dans toute la France sur des questions d'architecture logicielle, cloud AWS et devops.",
     "address": {
       "@type": "PostalAddress",

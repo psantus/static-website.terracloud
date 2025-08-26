@@ -170,7 +170,7 @@ static-website/
 
 ```bash
 # .env.production
-VITE_BASE_URL=https://web.terracloud.fr
+VITE_BASE_URL=https://www.terracloud.fr
 ```
 
 ## Monitoring & Validation

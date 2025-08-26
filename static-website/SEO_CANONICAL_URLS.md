@@ -11,7 +11,7 @@ This project implements automatic SEO meta tags and canonical URL management wit
 Create a `.env.production` file with:
 
 ```bash
-VITE_BASE_URL=https://web.terracloud.fr
+VITE_BASE_URL=https://www.terracloud.fr
 ```
 
 For development, you can create a `.env.local` file:
@@ -27,7 +27,7 @@ VITE_BASE_URL=http://localhost:5173
 For regular pages, the system automatically generates canonical URLs:
 
 ```tsx
-// This will generate: <link rel="canonical" href="https://web.terracloud.fr/services" />
+// This will generate: <link rel="canonical" href="https://www.terracloud.fr/services" />
 <SEO 
   title="Services - TerraCloud"
   description="Our services description"

@@ -24,7 +24,7 @@ const SEO = ({
   
   // Default og:image based on environment
   const defaultOgImage = `${import.meta.env.VITE_BASE_URL || 
-    (typeof window !== 'undefined' ? window.location.origin : 'https://web.terracloud.fr')}/logo-orange.png`
+    (typeof window !== 'undefined' ? window.location.origin : 'https://www.terracloud.fr')}/logo-orange.png`
   
   const finalOgImage = ogImage || defaultOgImage
   

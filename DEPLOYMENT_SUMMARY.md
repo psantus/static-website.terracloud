@@ -3,7 +3,7 @@
 ## ✅ Successfully Deployed!
 
 **Deployment Date**: August 25, 2025 at 22:32 UTC  
-**Website URL**: https://web.terracloud.fr  
+**Website URL**: https://www.terracloud.fr  
 **Files Deployed**: 149 (up from 129)  
 **CloudFront Distribution**: E2SL7EPXNPNY1Y  
 
@@ -87,7 +87,7 @@
 7. **CloudFront invalidation** for immediate availability
 
 ### Environment Variables:
-- `VITE_BASE_URL=https://web.terracloud.fr`
+- `VITE_BASE_URL=https://www.terracloud.fr`
 - `VITE_CONTACT_FORM_URL=https://aolduhbq2oyfclaavfdxatrp4m0jweja.lambda-url.eu-west-1.on.aws/`
 
 ### SEO Features:
@@ -108,7 +108,7 @@
 
 ## 🔍 Verification
 
-- ✅ Website accessible at https://web.terracloud.fr
+- ✅ Website accessible at https://www.terracloud.fr
 - ✅ Pre-rendered pages serving static HTML
 - ✅ CloudFront cache invalidated
 - ✅ All 149 files deployed successfully

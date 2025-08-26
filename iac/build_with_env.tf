@@ -35,7 +35,7 @@ data "external" "build_react_app_with_env" {
       
       # Create .env.production file with environment variables
       echo "VITE_CONTACT_FORM_URL=$${LAMBDA_URL}" > .env.production
-      echo "VITE_BASE_URL=https://web.terracloud.fr" >> .env.production
+      echo "VITE_BASE_URL=https://${local.full_domain_name}" >> .env.production
       
       # Build the application
       echo "Building application..." >&2

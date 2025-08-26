@@ -7,7 +7,7 @@ export const useCanonicalUrl = (customCanonical?: string) => {
   
   // Get base URL from environment variable, fallback to current origin in development
   const baseUrl = import.meta.env.VITE_BASE_URL || 
-                  (typeof window !== 'undefined' ? window.location.origin : 'https://web.terracloud.fr')
+                  (typeof window !== 'undefined' ? window.location.origin : 'https://www.terracloud.fr')
   
   // If custom canonical is provided, use it directly
   if (customCanonical) {

@@ -60,7 +60,7 @@ Message:
 {message}
 
 ---
-This message was sent from the contact form on web.terracloud.fr"""
+This message was sent from the contact form on www.terracloud.fr"""
 
         # Send notification via SNS
         sns = boto3.client('sns')

@@ -142,191 +142,12 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
         canonical={post.canonicalUrl} // This will use custom canonical if provided, otherwise self-canonical
       />
 
-      <div className="section-padding">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            {/* Back to Blog */}
-            <div className="mb-8">
-              <Link
-                to={createUrl('/blog')}
-                className="inline-flex items-center text-terracloud-orange hover:text-terracloud-blue transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                {t('blog.backToBlog', 'Retour au blog')}
-              </Link>
-            </div>
-
-            {/* Article Header */}
-            <header className="mb-8">
-              {/* Canonical URL Notice */}
-              {post.canonicalUrl && post.canonicalUrl !== `${window.location.origin}${createUrl(`/blog/${post.slug}`)}` && (
-                <div className="mb-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-                      <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm text-blue-700">
-                        {t('blog.canonicalNotice', 'Cet article a été publié originalement sur')} {' '}
-                        <a 
-                          href={post.canonicalUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="font-medium underline hover:text-blue-800"
-                        >
-                          {new URL(post.canonicalUrl).hostname}
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Category Badge */}
-              <div className="mb-4">
-                <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
-                  post.category === 'tech' ? 'bg-blue-100 text-blue-800' :
-                  post.category === 'opinion' ? 'bg-green-100 text-green-800' :
-                  'bg-gray-100 text-gray-800'
-                }`}>
-                  {getCategoryLabel(post.category)}
-                </span>
-              </div>
-
-              {/* Title */}
-              <h1 className="text-3xl lg:text-4xl font-bold text-terracloud-dark mb-4">
-                {post.title}
-              </h1>
-
-              {/* Excerpt */}
-              <p className="text-xl text-terracloud-gray mb-6">
-                {post.excerpt}
-              </p>
-
-              {/* Meta Info */}
-              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
-                <div className="flex items-center">
-                  <User className="h-4 w-4 mr-2" />
-                  {post.author}
-                </div>
-                <div className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  {formatDate(post.publishedAt)}
-                </div>
-                <div className="flex items-center">
-                  <Clock className="h-4 w-4 mr-2" />
-                  {actualReadingTime || post.readingTime} {t('blog.readingTime', 'min de lecture')}
-                </div>
-              </div>
-
-              {/* Featured Image */}
-              {post.image && (
-                <div className="mb-8">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-64 lg:h-96 object-cover rounded-lg"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                    }}
-                  />
-                </div>
-              )}
-            </header>
-
-            {/* Article Content */}
-            <article className="prose prose-lg max-w-none prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-code:text-gray-800">
-              <div className="text-terracloud-dark">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={{
-                    // Custom styling for code blocks - force dark theme
-                    pre: ({ children }: { children?: React.ReactNode }) => (
-                      <pre className="!bg-gray-900 !text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700 font-mono text-sm leading-relaxed shadow-lg my-4 whitespace-pre">
-                        {children}
-                      </pre>
-                    ),
-                    code: ({ inline, className, children, ...props }: {
-                      inline?: boolean;
-                      className?: string;
-                      children?: React.ReactNode;
-                      [key: string]: any;
-                    }) => {
-                      // Check if this should be a code block based on content length or newlines
-                      const codeContent = String(children).replace(/\n$/, '');
-                      const isLongCode = codeContent.length > 50 || codeContent.includes('\n') || codeContent.includes('{');
-                      
-                      if (inline && !isLongCode) {
-                        // Short inline code - light background, dark text
-                        return (
-                          <code className="!bg-gray-200 !text-gray-900 px-2 py-1 rounded text-sm font-mono border" {...props}>
-                            {codeContent}
-                          </code>
-                        );
-                      } else {
-                        // Long code or code blocks - treat as block code
-                        return (
-                          <code className="!text-gray-100 font-mono block bg-gray-900 p-3 rounded my-2 overflow-x-auto whitespace-pre" {...props}>
-                            {codeContent}
-                          </code>
-                        );
-                      }
-                    },
-                    // Custom styling for links
-                    a: ({ href, children }: { href?: string; children?: React.ReactNode }) => (
-                      <a
-                        href={href}
-                        className="text-terracloud-orange hover:text-terracloud-blue transition-colors"
-                        target={href?.startsWith('http') ? '_blank' : undefined}
-                        rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      >
-                        {children}
-                      </a>
-                    ),
-                    // Custom styling for headings
-                    h1: ({ children }: { children?: React.ReactNode }) => (
-                      <h1 className="text-3xl font-bold text-terracloud-dark mt-8 mb-4">
-                        {children}
-                      </h1>
-                    ),
-                    h2: ({ children }: { children?: React.ReactNode }) => (
-                      <h2 className="text-2xl font-bold text-terracloud-dark mt-6 mb-3">
-                        {children}
-                      </h2>
-                    ),
-                    h3: ({ children }: { children?: React.ReactNode }) => (
-                      <h3 className="text-xl font-bold text-terracloud-dark mt-4 mb-2">
-                        {children}
-                      </h3>
-                    ),
-                  }}
-                >
-                  {markdownContent}
-                </ReactMarkdown>
-              </div>
-            </article>
-
-            {/* Tags */}
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <h3 className="text-lg font-semibold text-terracloud-dark mb-4">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map(tag => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
-                  >
-                    <Tag className="h-3 w-3 mr-1" />
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Navigation */}
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <div className="flex justify-between items-center">
+      <div className="min-h-screen">
+        <div className="section-padding">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto">
+              {/* Back to Blog */}
+              <div className="mb-8">
                 <Link
                   to={createUrl('/blog')}
                   className="inline-flex items-center text-terracloud-orange hover:text-terracloud-blue transition-colors"
@@ -334,13 +155,196 @@ En attendant, vous pouvez consulter d'autres articles de notre blog ou nous cont
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   {t('blog.backToBlog', 'Retour au blog')}
                 </Link>
-                
-                <Link
-                  to={createUrl('/nous-contacter')}
-                  className="bg-terracloud-orange text-white px-6 py-2 rounded-lg hover:bg-terracloud-blue transition-colors"
-                >
-                  {t('common.contact', 'Contact')}
-                </Link>
+              </div>
+
+              {/* Article Header - Ensure it's not fixed */}
+              <header className="relative mb-8">
+                {/* Canonical URL Notice */}
+                {post.canonicalUrl && post.canonicalUrl !== `${window.location.origin}${createUrl(`/blog/${post.slug}`)}` && (
+                  <div className="mb-4 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm text-blue-700">
+                          {t('blog.canonicalNotice', 'Cet article a été publié originalement sur')} {' '}
+                          <a 
+                            href={post.canonicalUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="font-medium underline hover:text-blue-800"
+                          >
+                            {new URL(post.canonicalUrl).hostname}
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Category Badge */}
+                <div className="mb-4">
+                  <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full ${
+                    post.category === 'tech' ? 'bg-blue-100 text-blue-800' :
+                    post.category === 'opinion' ? 'bg-green-100 text-green-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {getCategoryLabel(post.category)}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h1 className="text-3xl lg:text-4xl font-bold text-terracloud-dark mb-4">
+                  {post.title}
+                </h1>
+
+                {/* Excerpt */}
+                <p className="text-xl text-terracloud-gray mb-6">
+                  {post.excerpt}
+                </p>
+
+                {/* Meta Info */}
+                <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+                  <div className="flex items-center">
+                    <User className="h-4 w-4 mr-2" />
+                    {post.author}
+                  </div>
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    {formatDate(post.publishedAt)}
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="h-4 w-4 mr-2" />
+                    {actualReadingTime || post.readingTime} {t('blog.readingTime', 'min de lecture')}
+                  </div>
+                </div>
+
+                {/* Featured Image */}
+                {post.image && (
+                  <div className="mb-8">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-64 lg:h-96 object-cover rounded-lg"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none'
+                      }}
+                    />
+                  </div>
+                )}
+              </header>
+
+              {/* Article Content - Ensure proper flow */}
+              <article className="relative w-full overflow-visible">
+                <div className="prose prose-lg max-w-none prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-code:text-gray-800">
+                  <div className="text-terracloud-dark">
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        // Custom styling for code blocks - force dark theme
+                        pre: ({ children }: { children?: React.ReactNode }) => (
+                          <pre className="!bg-gray-900 !text-gray-100 p-4 rounded-lg overflow-x-auto border border-gray-700 font-mono text-sm leading-relaxed shadow-lg my-4 whitespace-pre">
+                            {children}
+                          </pre>
+                        ),
+                        code: ({ inline, className, children, ...props }: {
+                          inline?: boolean;
+                          className?: string;
+                          children?: React.ReactNode;
+                          [key: string]: any;
+                        }) => {
+                          // Check if this should be a code block based on content length or newlines
+                          const codeContent = String(children).replace(/\n$/, '');
+                          const isLongCode = codeContent.length > 50 || codeContent.includes('\n') || codeContent.includes('{');
+                          
+                          if (inline && !isLongCode) {
+                            // Short inline code - light background, dark text
+                            return (
+                              <code className="!bg-gray-200 !text-gray-900 px-2 py-1 rounded text-sm font-mono border" {...props}>
+                                {codeContent}
+                              </code>
+                            );
+                          } else {
+                            // Long code or code blocks - treat as block code
+                            return (
+                              <code className="!text-gray-100 font-mono block bg-gray-900 p-3 rounded my-2 overflow-x-auto whitespace-pre" {...props}>
+                                {codeContent}
+                              </code>
+                            );
+                          }
+                        },
+                        // Custom styling for links
+                        a: ({ href, children }: { href?: string; children?: React.ReactNode }) => (
+                          <a
+                            href={href}
+                            className="text-terracloud-orange hover:text-terracloud-blue transition-colors"
+                            target={href?.startsWith('http') ? '_blank' : undefined}
+                            rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                          >
+                            {children}
+                          </a>
+                        ),
+                        // Custom styling for headings
+                        h1: ({ children }: { children?: React.ReactNode }) => (
+                          <h1 className="text-3xl font-bold text-terracloud-dark mt-8 mb-4">
+                            {children}
+                          </h1>
+                        ),
+                        h2: ({ children }: { children?: React.ReactNode }) => (
+                          <h2 className="text-2xl font-bold text-terracloud-dark mt-6 mb-3">
+                            {children}
+                          </h2>
+                        ),
+                        h3: ({ children }: { children?: React.ReactNode }) => (
+                          <h3 className="text-xl font-bold text-terracloud-dark mt-4 mb-2">
+                            {children}
+                          </h3>
+                        ),
+                      }}
+                    >
+                      {markdownContent}
+                    </ReactMarkdown>
+                  </div>
+                </div>
+              </article>
+
+              {/* Tags */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-terracloud-dark mb-4">Tags</h3>
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.map(tag => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors"
+                    >
+                      <Tag className="h-3 w-3 mr-1" />
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Navigation */}
+              <div className="mt-12 pt-8 border-t border-gray-200">
+                <div className="flex justify-between items-center">
+                  <Link
+                    to={createUrl('/blog')}
+                    className="inline-flex items-center text-terracloud-orange hover:text-terracloud-blue transition-colors"
+                  >
+                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    {t('blog.backToBlog', 'Retour au blog')}
+                  </Link>
+                  
+                  <Link
+                    to={createUrl('/nous-contacter')}
+                    className="bg-terracloud-orange text-white px-6 py-2 rounded-lg hover:bg-terracloud-blue transition-colors"
+                  >
+                    {t('common.contact', 'Contact')}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

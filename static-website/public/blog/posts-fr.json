@@ -5,9 +5,9 @@
       "title": "Comment Remplacer Votre CMS par un Site Statique avec Amazon Q CLI Chat",
       "description": "J'ai relevé le AWS Builder Challenge #cloud-launch-challenge-1 en reconstruisant complètement mon site de conseil en moins de 5 heures. Découvrez comment remplacer WordPress par une architecture statique moderne avec Amazon Q CLI Chat comme partenaire IA.",
       "date": "2025-08-25",
-      "category": "blog",
+      "category": "tech",
       "tags": ["aws", "static-site", "amazon-q", "cli-chat", "wordpress", "migration", "terraform", "s3", "cloudfront", "lambda", "ai", "builder-challenge"],
-      "featuredImage": "",
+      "featuredImage": "/images/blog/goodbye-wordpress.jpg",
       "slug": "comment-remplacer-votre-cms-par-un-site-statique-avec-amazon-q-cli-chat"
     },
     {
@@ -25,7 +25,7 @@
       "title": "Architecture orientée événement : réconcilier Notifications et Evénements \"Complets\"",
       "description": "Evénement minimaliste ou complet ? En architecture orientée événement, les différents modèles existent. Nous proposons ici une manière de réconcilier simplement les différentes approches",
       "date": "2024-07-04",
-      "category": "blog",
+      "category": "tech",
       "tags": ["architecture", "aws", "event", "event-driven architure", "eventbridge"],
       "featuredImage": "/images/blog/NotificationVsECST.png",
       "slug": "architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets",
@@ -36,7 +36,7 @@
       "title": "Les objets de votre bucket S3 sont peut-être publics (même si la console AWS vous dit le contraire)",
       "description": "S3 est un service de stockage incroyable, capable de stocker durablement des données à l'échelle. Dans cet article de blog, je vais vous montrer une manière peu connue par laquelle vos objets pourraient devenir publics par erreur .",
       "date": "2024-05-02",
-      "category": "blog",
+      "category": "tech",
       "tags": ["aws", "s3", "sécurité"],
       "featuredImage": "",
       "slug": "les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire"
@@ -139,7 +139,7 @@
       "title": "Déployer une API de stockage de données simple avec très peu de code en utilisant Amazon API Gateway et DynamoDB",
       "description": "Tutoriel pour créer rapidement une API de stockage avec AWS API Gateway et DynamoDB.",
       "date": "2022-12-17",
-      "category": "blog",
+      "category": "tech",
       "tags": ["api", "apigateway", "aws", "dynamodb", "serverless"],
       "featuredImage": "",
       "slug": "deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb",
@@ -160,7 +160,7 @@
       "title": "PowerBI : déployer une passerelle sur AWS pour 0,12€/j",
       "description": "Guide pour déployer une passerelle PowerBI sur AWS de manière économique.",
       "date": "2022-12-03",
-      "category": "blog",
+      "category": "tech",
       "tags": ["aws", "ec2", "powerbi"],
       "featuredImage": "",
       "slug": "powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j"

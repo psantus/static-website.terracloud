@@ -5,9 +5,9 @@
       "title": "How to Replace Your CMS with a Static Site Using Amazon Q CLI Chat",
       "description": "I tackled the AWS Builder Challenge #cloud-launch-challenge-1 by completely rebuilding my consulting website in under 5 hours. Discover how to replace WordPress with a modern static architecture using Amazon Q CLI Chat as your AI pair programming partner.",
       "date": "2025-08-25",
-      "category": "blog",
+      "category": "tech",
       "tags": ["aws", "static-site", "amazon-q", "cli-chat", "wordpress", "migration", "terraform", "s3", "cloudfront", "lambda", "ai", "builder-challenge"],
-      "featuredImage": "",
+      "featuredImage": "/images/blog/goodbye-wordpress.jpg",
       "slug": "how-to-replace-your-cms-with-a-static-site-using-amazon-q-cli-chat"
     },
     {
@@ -25,7 +25,7 @@
       "title": "Event-Driven Architecture: Reconciling Notifications and Complete Events",
       "description": "Minimalist or complete events? In event-driven architecture, different models exist. We propose here a way to simply reconcile the different approaches.",
       "date": "2024-07-04",
-      "category": "blog",
+      "category": "tech",
       "tags": ["architecture", "aws", "event", "event-driven architecture", "eventbridge"],
       "featuredImage": "/images/blog/NotificationVsECST.png",
       "slug": "architecture-orientee-evenement-reconcilier-notifications-et-evenements-complets",
@@ -36,7 +36,7 @@
       "title": "Your S3 Bucket Objects Might Be Public Even If the AWS Console Says Otherwise",
       "description": "S3 is an incredible storage service, capable of durably storing data at scale. In this blog article, I'll show you a little-known way your objects could become public by mistake.",
       "date": "2024-05-02",
-      "category": "blog",
+      "category": "tech",
       "tags": ["aws", "s3", "security"],
       "featuredImage": "",
       "slug": "les-objets-de-votre-bucket-s3-sont-peut-etre-publics-meme-si-la-console-aws-vous-dit-le-contraire"
@@ -139,7 +139,7 @@
       "title": "Deploy a Simple Data Storage API with Very Little Code Using Amazon API Gateway and DynamoDB",
       "description": "Tutorial to quickly create a storage API with AWS API Gateway and DynamoDB.",
       "date": "2022-12-17",
-      "category": "blog",
+      "category": "tech",
       "tags": ["api", "apigateway", "aws", "dynamodb", "serverless"],
       "featuredImage": "",
       "slug": "deployer-une-api-de-stockage-de-donnees-simple-avec-tres-peu-de-code-en-utilisant-amazon-api-gateway-et-dynamodb",
@@ -160,7 +160,7 @@
       "title": "PowerBI: Deploy a Gateway on AWS for $0.12/day",
       "description": "Guide to deploy a PowerBI gateway on AWS economically.",
       "date": "2022-12-03",
-      "category": "blog",
+      "category": "tech",
       "tags": ["aws", "ec2", "powerbi"],
       "featuredImage": "",
       "slug": "powerbi-deployer-une-passerelle-sur-aws-pour-0-12-j"

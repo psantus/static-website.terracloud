@@ -1,9 +1,3 @@
-# How to Replace Your CMS with a Static Site Using Amazon Q CLI Chat
-
-*Published: August 25, 2025*  
-*Author: Paul Santus*  
-*Live website: [www.terracloud.fr](https://www.terracloud.fr)*
-
 ## Taking on the AWS Builder Challenge
 
 I decided to tackle the **AWS Builder Challenge #cloud-launch-challenge-1** by completely rebuilding my consulting website from scratch. The challenge? Replace a traditional WordPress CMS with a modern static site architecture - and do it fast. 

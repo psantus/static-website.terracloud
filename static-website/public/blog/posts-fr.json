@@ -8,7 +8,8 @@
       "category": "tech",
       "tags": ["aws", "static-site", "amazon-q", "cli-chat", "wordpress", "migration", "terraform", "s3", "cloudfront", "lambda", "ai", "builder-challenge"],
       "featuredImage": "/images/blog/goodbye-wordpress.jpg",
-      "slug": "comment-remplacer-votre-cms-par-un-site-statique-avec-amazon-q-cli-chat"
+      "slug": "comment-remplacer-votre-cms-par-un-site-statique-avec-amazon-q-cli-chat",
+      "canonicalUrl": "https://builder.aws.com/content/31nmKcb4QNJNBrP7KQ1ihoqQDkI/how-to-replace-your-cms-with-a-static-site-using-amazon-q-cli-chat"
     },
     {
       "id": "aws-user-group-poitiers-retour-sur-le-meetup-serverless-en-php-avec-lafup-poitiers",

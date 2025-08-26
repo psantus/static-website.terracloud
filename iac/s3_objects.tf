@@ -59,7 +59,7 @@ resource "aws_s3_object" "static_website_files" {
 
   # Ensure the build with environment variables completes before uploading files
   # This is the key dependency that ensures proper ordering
-  depends_on = [null_resource.build_react_app_with_env]
+  depends_on = [data.external.build_react_app_with_env]
 
   tags = local.common_tags
 }

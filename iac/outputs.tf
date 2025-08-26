@@ -80,7 +80,7 @@ output "sns_topic_arn" {
 # Build and deployment tracking outputs
 output "build_timestamp" {
   description = "Timestamp of the last build"
-  value       = null_resource.build_react_app_with_env.triggers.timestamp
+  value       = data.external.build_react_app_with_env.result.timestamp
 }
 
 output "deployed_files_count" {

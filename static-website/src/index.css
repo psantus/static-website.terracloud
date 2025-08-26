@@ -5,14 +5,41 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
+  }
+
+  /* Ensure proper scrolling in production builds */
+  #root {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Fix any potential layout issues with blog posts */
+  .blog-post-container {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .blog-post-header {
+    position: relative;
+    z-index: 1;
+  }
+
+  .blog-post-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: visible;
   }
 }
 

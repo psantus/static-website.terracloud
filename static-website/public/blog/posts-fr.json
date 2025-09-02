@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "id": "le-chemin-le-plus-court-et-le-moins-cher-pour-obtenir-les-12-certifications-aws",
+      "title": "Le chemin le plus court (et le moins cher) pour obtenir les 12 certifications AWS",
+      "description": "Après avoir complété les 12 certifications AWS et obtenu ma veste dorée, je souhaite partager le chemin le plus efficace et économique que j'ai découvert. Apprenez les stratégies de certification, les approches d'apprentissage, et comment maximiser les bénéfices des programmes AWS.",
+      "date": "2025-09-02",
+      "category": "blog",
+      "tags": ["aws", "certifications", "apprentissage", "carrière", "community-builder", "aai", "skillbuilder", "well-architected"],
+      "featuredImage": "/images/blog/golden-jacket.jpeg",
+      "slug": "le-chemin-le-plus-court-et-le-moins-cher-pour-obtenir-les-12-certifications-aws",
+      "canonicalUrl": "https://builder.aws.com/content/329tkwL8jVylC1k7B8rnIrp3L2D/the-shortest-and-cheapest-way-to-achieving-all-12-aws-certifications"
+    },
+    {
       "id": "comment-remplacer-votre-cms-par-un-site-statique-avec-amazon-q-cli-chat",
       "title": "Comment Remplacer Votre CMS par un Site Statique avec Amazon Q CLI Chat",
       "description": "J'ai relevé le AWS Builder Challenge #cloud-launch-challenge-1 en reconstruisant complètement mon site de conseil en moins de 5 heures. Découvrez comment remplacer WordPress par une architecture statique moderne avec Amazon Q CLI Chat comme partenaire IA.",

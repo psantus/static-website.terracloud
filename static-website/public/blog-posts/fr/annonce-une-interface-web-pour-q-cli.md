@@ -1,3 +1,7 @@
+# 🚀 Annonce : Une Interface Web pour Q CLI
+
+![Amazon Q Developer CLI WebUI](/images/blog/q-web-ui-screenshot.png)
+
 ## 🎯 Le Game Changer du Game changer ^^
 
 Amazon Q Developer révolutionne la façon dont nous écrivons du code, déboguons les problèmes et concevons des solutions. 
@@ -11,6 +15,8 @@ Aujourd'hui, nous publions une nouvelle WebUI qui brise cette barrière en fourn
 - **Navigation de fichiers professionnelle** - Visualiseur de code intégré avec coloration syntaxique
 - **Sécurité de niveau entreprise** - Authentification AWS Cognito et messagerie IoT Core
 - **Accessibilité mondiale** - CDN CloudFront pour des performances mondiales
+
+![Gestion multi-sessions](/images/blog/q-web-ui-multi-session.gif)
 
 ## 🏗️ Architecture : conçue pour passer à l'Échelle
 
@@ -46,6 +52,8 @@ Notre solution exploite une architecture moderne et cloud-native conçue pour le
 - **Serveur Node.js MQTT** : Fait le pont entre Q CLI et l'interface web
 - **Terraform IaC** : Automatisation complète de l'infrastructure
 
+![Intégration navigateur de fichiers](/images/blog/q-web-ui-file-browser.gif)
+
 ## 🌟 Améliorations majeures :
 
 Au cours du dernier cycle de développement, nous avons introduit des fonctionnalités révolutionnaires qui distinguent cette WebUI :
@@ -55,6 +63,8 @@ Au cours du dernier cycle de développement, nous avons introduit des fonctionna
 - **Persistance des sessions** - Sauvegarde et restauration automatiques entre les sessions navigateur
 - **Isolation des sessions** - Chaque conversation maintient son propre contexte
 - **Support des répertoires de travail** - Les sessions peuvent opérer dans différents dossiers
+
+![Connexion sécurisée avec AWS Cognito](/images/blog/q-web-ui-login.gif)
 
 ### 📁 **Navigateur et Visualiseur de Fichiers Professionnel**
 - **Navigateur de fichiers intégré** - Naviguez dans les fichiers de projet directement dans l'UI

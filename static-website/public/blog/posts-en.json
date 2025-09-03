@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "id": "introducing-q-cli-web-ui",
+      "title": "Introducing the Ultimate Amazon Q Developer CLI WebUI: A Modern, Production-Ready Interface for your remote and mobile vibe-coding",
+      "description": "A complete reimagining of how developers interact with Amazon Q through a sleek, web-based interface. Built upon gabrielkoo's foundation, we've transformed it into a production-ready, feature-rich platform with multi-session management, real-time collaboration, and enterprise-grade security.",
+      "date": "2025-09-04",
+      "category": "tech",
+      "tags": ["amazon-q", "cli", "webui", "aws", "iot-core", "cognito", "cloudfront", "terraform", "nodejs", "mqtt", "developer-tools", "ai"],
+      "featuredImage": "/images/blog/q-web-ui-screenshot.png",
+      "slug": "introducing-q-cli-web-ui"
+    },
+    {
       "id": "the-shortest-and-cheapest-way-to-achieving-all-12-aws-certifications",
       "title": "The shortest (and cheapest) way to achieving all 12 AWS certifications",
       "description": "After completing all 12 AWS certifications and earning my golden jacket, I want to share the most efficient and cost-effective path I discovered. Learn about certification strategy, learning approaches, and maximizing AWS program benefits.",

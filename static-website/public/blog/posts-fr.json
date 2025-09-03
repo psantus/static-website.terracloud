@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "id": "annonce-une-interface-web-pour-q-cli",
+      "title": "[Annonce] Vibe-codez sur votre mobile grâce à l'Amazon Q Developer CLI WebUI",
+      "description": "Une réinvention complète de la façon dont les développeurs interagissent avec Amazon Q à travers une interface web élégante. Construite sur les fondations de gabrielkoo, nous l'avons transformée en une plateforme riche en fonctionnalités avec gestion multi-sessions, collaboration temps réel et sécurité de niveau entreprise.",
+      "date": "2025-09-04",
+      "category": "tech",
+      "tags": ["amazon-q", "cli", "webui", "aws", "iot-core", "cognito", "cloudfront", "terraform", "nodejs", "mqtt", "outils-developpeur", "ia"],
+      "featuredImage": "/images/blog/q-web-ui-screenshot.png",
+      "slug": "annonce-une-interface-web-pour-q-cli"
+    },
+    {
       "id": "le-chemin-le-plus-court-et-le-moins-cher-pour-obtenir-les-12-certifications-aws",
       "title": "Le chemin le plus court (et le moins cher) pour obtenir les 12 certifications AWS",
       "description": "Après avoir complété les 12 certifications AWS et obtenu ma veste dorée, je souhaite partager le chemin le plus efficace et économique que j'ai découvert. Apprenez les stratégies de certification, les approches d'apprentissage, et comment maximiser les bénéfices des programmes AWS.",

@@ -1,7 +1,3 @@
-# 🚀 Annonce : Une Interface Web pour Q CLI
-
-![Amazon Q Developer CLI WebUI](/images/blog/q-web-ui-screenshot.png)
-
 ## 🎯 Le Game Changer du Game changer ^^
 
 Amazon Q Developer révolutionne la façon dont nous écrivons du code, déboguons les problèmes et concevons des solutions. 
